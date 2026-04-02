@@ -17,6 +17,25 @@
   <meta name="twitter:title" content="কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি" />
   <meta name="twitter:description" content="আহনাফ তাহসিনের লেখা বাংলা কবিতা, গজল ও হাইকু পড়ুন কলমচি ডায়েরিতে।" />
 
+  <!-- ✦ FIX 1: Beautiful pen-nib favicon — shows in browser tab like Claude/Gemini icons -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23100e0b'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='%23c9a87c' opacity='0.18'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='none' stroke='%23c9a87c' stroke-width='1.7' stroke-linejoin='round'/><line x1='16' y1='16' x2='16' y2='28' stroke='%23c9a87c' stroke-width='1.1' opacity='0.45'/><circle cx='16' cy='4.5' r='2.2' fill='%23c9a87c'/></svg>">
+  <!-- Fallback 32×32 PNG-like icon for older browsers -->
+  <link rel="alternate icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23100e0b'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='%23c9a87c' opacity='0.18'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='none' stroke='%23c9a87c' stroke-width='1.7' stroke-linejoin='round'/><line x1='16' y1='16' x2='16' y2='28' stroke='%23c9a87c' stroke-width='1.1' opacity='0.45'/><circle cx='16' cy='4.5' r='2.2' fill='%23c9a87c'/></svg>">
+  <!-- Apple touch icon (iOS home screen) -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%23100e0b'/><path d='M90 25L143 90L90 158L37 90Z' fill='%23c9a87c' opacity='0.18'/><path d='M90 25L143 90L90 158L37 90Z' fill='none' stroke='%23c9a87c' stroke-width='9' stroke-linejoin='round'/><line x1='90' y1='90' x2='90' y2='158' stroke='%23c9a87c' stroke-width='6' opacity='0.45'/><circle cx='90' cy='25' r='13' fill='%23c9a87c'/></svg>">
+
+  <!-- ✦ FIX 2: theme-color for mobile browser chrome -->
+  <meta name="theme-color" content="#080706" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4ede3" media="(prefers-color-scheme: light)" />
+
+  <!-- ✦ FIX 3: Prevent theme flash — read localStorage BEFORE first paint -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('কলমচি-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","name":"কলমচি","url":"https://kolomchi-41c3a.web.app/","author":{"@type":"Person","name":"Ahnaf Tahsin"},"description":"আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি।"}
   </script>
@@ -1538,6 +1557,7 @@
         await addDoc(collection(db, "comments"), {
           poemId: currentPoemId, name, text, timestamp: serverTimestamp()
         });
+        /* ✦ FIX 4: Clear the comment textarea after posting */
         $("commentText").value = "";
         toast("মন্তব্য প্রকাশিত হয়েছে!", "✓");
         loadComments(currentPoemId);
@@ -1689,9 +1709,9 @@
     addOverlay.addEventListener("click", e => { if(e.target===addOverlay) closeOverlay("addOverlay"); });
     $("addSubmit").addEventListener("click", doAddPoem);
 
-    // Live counters
+    /* ✦ FIX 5: Title counter now uses Bengali numerals consistently */
     $("poemTitle").addEventListener("input", function() {
-      $("titleCounter").textContent = `${this.value.length}/৮০`;
+      $("titleCounter").textContent = `${toBnNum(this.value.length)}/৮০`;
       $("titleCounter").classList.toggle("warn", this.value.length > 65);
     });
 
@@ -1742,9 +1762,9 @@
     ══════════════════════════════════════ */
     const html     = document.documentElement;
     const themeBtn = $("themeBtn");
-    const savedTheme = localStorage.getItem("কলমচি-theme") || "dark";
-    html.setAttribute("data-theme", savedTheme);
-    themeBtn.textContent = savedTheme === "dark" ? "🌙" : "☀️";
+    /* Theme is already applied by the inline script — just sync the button icon */
+    const initialTheme = html.getAttribute("data-theme");
+    themeBtn.textContent = initialTheme === "dark" ? "🌙" : "☀️";
 
     themeBtn.addEventListener("click", () => {
       const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
