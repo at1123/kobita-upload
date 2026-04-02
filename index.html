@@ -3,8 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="কলমচি — একটি ডিজিটাল কবিতার ডায়েরি" />
-  <title>কলমচি — কবিতার ডায়েরি</title>
+  
+  <title>কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি</title>
+  <meta name="description" content="কলমচি — আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি। বাংলা কবিতা, গজল, হাইকু ও মুক্তছন্দের অপূর্ব সংগ্রহশালা।" />
+  <meta name="keywords" content="কবিতা, বাংলা কবিতা, আহনাফ তাহসিন, Ahnaf Tahsin, কলমচি, গজল, হাইকু, মুক্তছন্দ, বাংলা সাহিত্য, ডিজিটাল ডায়েরি" />
+  <meta name="author" content="Ahnaf Tahsin" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি" />
+  <meta property="og:description" content="আহনাফ তাহসিনের লেখা বাংলা কবিতা, গজল ও হাইকু পড়ুন কলমচি ডায়েরিতে।" />
+  <meta property="og:url" content="https://kolomchi-41c3a.web.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি" />
+  <meta name="twitter:description" content="আহনাফ তাহসিনের লেখা বাংলা কবিতা, গজল ও হাইকু পড়ুন কলমচি ডায়েরিতে।" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "কলমচি",
+    "url": "https://kolomchi-41c3a.web.app/",
+    "author": {
+      "@type": "Person",
+      "name": "Ahnaf Tahsin"
+    },
+    "description": "আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি।"
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,7 +88,6 @@
       overflow-x: hidden;
     }
 
-    /* Paper grain overlay */
     body::before {
       content: '';
       position: fixed;
@@ -180,10 +205,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .home-title span {
-      color: var(--accent);
-      font-weight: 300;
-    }
+    .home-title span { color: var(--accent); font-weight: 300; }
 
     .home-desc {
       font-size: 0.88rem;
@@ -194,421 +216,126 @@
     }
 
     /* ─── Category Filter ─── */
-    .cat-strip {
-      display: flex;
-      gap: 0.45rem;
-      flex-wrap: wrap;
-      margin-bottom: 2.2rem;
-    }
-
+    .cat-strip { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
     .cat-btn {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      font-family: 'Hind Siliguri', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 400;
-      padding: 0.22rem 0.75rem;
-      border-radius: 2rem;
-      cursor: pointer;
-      transition: all 0.2s;
+      background: none; border: 1px solid var(--border); color: var(--text-muted);
+      font-family: 'Hind Siliguri', sans-serif; font-size: 0.78rem; font-weight: 400;
+      padding: 0.22rem 0.75rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s;
     }
     .cat-btn:hover { color: var(--accent); border-color: var(--accent); }
-    .cat-btn.active {
-      color: var(--accent);
-      border-color: var(--accent);
-      background: var(--accent-dim);
-    }
+    .cat-btn.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
 
     /* ─── Poem List ─── */
     .poem-list { display: flex; flex-direction: column; }
-
     .poem-item {
-      padding: 1.35rem 0;
-      border-bottom: 1px solid var(--border);
-      cursor: pointer;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1rem;
-      align-items: center;
+      padding: 1.35rem 0; border-bottom: 1px solid var(--border); cursor: pointer;
+      display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
       transition: padding-left 0.25s var(--ease);
     }
     .poem-item:first-child { border-top: 1px solid var(--border); }
     .poem-item:hover { padding-left: 0.6rem; }
     .poem-item:hover .poem-item-title { color: var(--accent); }
+    .poem-item-title { font-size: 1.05rem; font-weight: 500; color: var(--text); line-height: 1.4; margin-bottom: 0.25rem; transition: color 0.2s; }
+    .poem-item-preview { font-size: 0.82rem; font-weight: 300; color: var(--text-muted); line-height: 1.5; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 38ch; }
+    .poem-item-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; flex-shrink: 0; }
+    .poem-cat-badge { font-size: 0.7rem; color: var(--accent); border: 1px solid var(--accent-dim); background: var(--accent-dim); padding: 0.12rem 0.55rem; border-radius: 2rem; white-space: nowrap; }
+    .poem-date { font-size: 0.68rem; color: var(--text-muted); font-weight: 300; }
 
-    .poem-item-title {
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--text);
-      line-height: 1.4;
-      margin-bottom: 0.25rem;
-      transition: color 0.2s;
+    /* Admin Delete Button */
+    .btn-delete {
+      background: none; border: 1px solid #d97c7c; color: #d97c7c;
+      font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 0.3rem;
+      cursor: pointer; transition: all 0.2s; font-family: 'Hind Siliguri', sans-serif;
     }
-
-    .poem-item-preview {
-      font-size: 0.82rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      line-height: 1.5;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      max-width: 38ch;
-    }
-
-    .poem-item-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.3rem;
-      flex-shrink: 0;
-    }
-
-    .poem-cat-badge {
-      font-size: 0.7rem;
-      color: var(--accent);
-      border: 1px solid var(--accent-dim);
-      background: var(--accent-dim);
-      padding: 0.12rem 0.55rem;
-      border-radius: 2rem;
-      white-space: nowrap;
-    }
-
-    .poem-date {
-      font-size: 0.68rem;
-      color: var(--text-muted);
-      font-weight: 300;
-    }
+    .btn-delete:hover { background: rgba(217,124,124,0.1); color: #f59595; }
 
     /* ─── States ─── */
-    .empty-state {
-      text-align: center;
-      padding: 5rem 0 3rem;
-      color: var(--text-muted);
-      font-weight: 300;
-      font-size: 0.95rem;
-      line-height: 2.2;
-    }
-
-    .empty-glyph {
-      font-size: 2.5rem;
-      display: block;
-      margin-bottom: 1rem;
-      opacity: 0.3;
-    }
-
-    .loading-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 5px;
-      padding: 4rem 0;
-    }
-
-    .dot {
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--accent);
-      animation: pulse 1.4s infinite ease-in-out;
-    }
+    .empty-state { text-align: center; padding: 5rem 0 3rem; color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 2.2; }
+    .empty-glyph { font-size: 2.5rem; display: block; margin-bottom: 1rem; opacity: 0.3; }
+    .loading-row { display: flex; justify-content: center; align-items: center; gap: 5px; padding: 4rem 0; }
+    .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: pulse 1.4s infinite ease-in-out; }
     .dot:nth-child(2) { animation-delay: 0.18s; }
     .dot:nth-child(3) { animation-delay: 0.36s; }
 
-    @keyframes pulse {
-      0%, 80%, 100% { transform: scale(0.7); opacity: 0.25; }
-      40%            { transform: scale(1.0); opacity: 1; }
-    }
+    @keyframes pulse { 0%, 80%, 100% { transform: scale(0.7); opacity: 0.25; } 40% { transform: scale(1.0); opacity: 1; } }
 
     /* ─── Reading View ─── */
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--text-muted);
-      font-size: 0.83rem;
-      font-weight: 300;
-      font-family: 'Hind Siliguri', sans-serif;
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      margin-bottom: 3rem;
-      transition: color 0.2s;
-    }
+    .back-btn { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); font-size: 0.83rem; font-weight: 300; font-family: 'Hind Siliguri', sans-serif; background: none; border: none; padding: 0; cursor: pointer; margin-bottom: 3rem; transition: color 0.2s; }
     .back-btn:hover { color: var(--accent); }
+    .read-eyebrow { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .read-title { font-size: clamp(1.6rem, 4vw, 2.1rem); font-weight: 600; color: var(--text); line-height: 1.22; margin-bottom: 0.35rem; }
+    .read-author { font-size: 0.9rem; font-weight: 500; color: var(--accent); opacity: 0.8; margin-bottom: 0.85rem; }
+    .read-meta { font-size: 0.78rem; color: var(--text-muted); font-weight: 300; margin-bottom: 2.5rem; }
+    .read-rule { width: 3rem; height: 1px; background: linear-gradient(90deg, var(--accent), transparent); margin-bottom: 2.5rem; }
+    .read-body { font-size: 1.12rem; font-weight: 300; line-height: 2.15; color: var(--text); white-space: pre-wrap; word-break: break-word; letter-spacing: 0.01em; }
+    
+    /* ─── Comments Section ─── */
+    .comments-section { margin-top: 4rem; padding-top: 2rem; border-top: 1px dashed var(--border); }
+    .comments-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--text); }
+    .comment-form { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; }
+    .comments-list { display: flex; flex-direction: column; gap: 1rem; }
+    .comment-item { padding: 1.2rem; background: var(--surface2); border-radius: 0.8rem; border: 1px solid var(--border); }
+    .comment-name { font-weight: 600; font-size: 0.95rem; color: var(--accent); display: block; }
+    .comment-date { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.6rem; display: block; }
+    .comment-body { font-size: 0.92rem; font-weight: 300; line-height: 1.6; color: var(--text); }
 
-    .read-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    .read-title {
-      font-size: clamp(1.6rem, 4vw, 2.1rem);
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.22;
-      margin-bottom: 0.85rem;
-    }
-
-    .read-meta {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      font-weight: 300;
-      margin-bottom: 2.5rem;
-    }
-
-    .read-rule {
-      width: 3rem;
-      height: 1px;
-      background: linear-gradient(90deg, var(--accent), transparent);
-      margin-bottom: 2.5rem;
-    }
-
-    .read-body {
-      font-size: 1.12rem;
-      font-weight: 300;
-      line-height: 2.15;
-      color: var(--text);
-      white-space: pre-wrap;
-      word-break: break-word;
-      letter-spacing: 0.01em;
-    }
-
-    .read-footer {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .read-footer-logo {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--accent);
-      opacity: 0.5;
-    }
-
-    .read-footer-glyph {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      font-weight: 300;
-    }
+    .read-footer { margin-top: 3rem; padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .read-footer-logo { font-size: 1.1rem; font-weight: 600; color: var(--accent); opacity: 0.5; }
+    .read-footer-glyph { font-size: 0.75rem; color: var(--text-muted); font-weight: 300; }
 
     /* ─── Modals ─── */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s var(--ease);
-    }
-    .overlay.open {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .modal {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 1.25rem;
-      padding: 2.25rem;
-      width: 100%;
-      max-width: 400px;
-      position: relative;
-      transform: translateY(22px) scale(0.98);
-      transition: transform 0.35s var(--ease), background var(--dur) var(--ease);
-    }
-    .overlay.open .modal {
-      transform: translateY(0) scale(1);
-    }
-
-    .modal-x {
-      position: absolute;
-      top: 1.1rem;
-      right: 1.1rem;
-    }
-
-    .modal-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.3rem;
-    }
-
-    .modal-sub {
-      font-size: 0.82rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      margin-bottom: 1.75rem;
-    }
-
+    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease); }
+    .overlay.open { opacity: 1; pointer-events: all; }
+    .modal { background: var(--bg2); border: 1px solid var(--border); border-radius: 1.25rem; padding: 2.25rem; width: 100%; max-width: 400px; position: relative; transform: translateY(22px) scale(0.98); transition: transform 0.35s var(--ease), background var(--dur) var(--ease); }
+    .overlay.open .modal { transform: translateY(0) scale(1); }
+    .modal-x { position: absolute; top: 1.1rem; right: 1.1rem; }
+    .modal-title { font-size: 1.2rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+    .modal-sub { font-size: 0.82rem; font-weight: 300; color: var(--text-muted); margin-bottom: 1.75rem; }
     .field { margin-bottom: 1.1rem; }
-
-    .field-label {
-      display: block;
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-      letter-spacing: 0.05em;
-    }
-
-    .field-input,
-    .field-select,
-    .field-textarea {
-      width: 100%;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 0.6rem;
-      color: var(--text);
-      font-family: 'Hind Siliguri', sans-serif;
-      font-size: 0.92rem;
-      font-weight: 300;
-      padding: 0.65rem 0.9rem;
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-      -webkit-appearance: none;
-    }
-    .field-input:focus,
-    .field-select:focus,
-    .field-textarea:focus {
-      border-color: var(--accent);
-      background: var(--surface);
-    }
-
-    .field-textarea {
-      min-height: 200px;
-      resize: vertical;
-      line-height: 1.85;
-    }
-
+    .field-label { display: block; font-size: 0.75rem; font-weight: 400; color: var(--text-muted); margin-bottom: 0.4rem; letter-spacing: 0.05em; }
+    .field-input, .field-select, .field-textarea { width: 100%; background: var(--surface2); border: 1px solid var(--border); border-radius: 0.6rem; color: var(--text); font-family: 'Hind Siliguri', sans-serif; font-size: 0.92rem; font-weight: 300; padding: 0.65rem 0.9rem; outline: none; transition: border-color 0.2s, background 0.2s; -webkit-appearance: none; }
+    .field-input:focus, .field-select:focus, .field-textarea:focus { border-color: var(--accent); background: var(--surface); }
+    .field-textarea { min-height: 200px; resize: vertical; line-height: 1.85; }
     .field-select { cursor: pointer; }
-
-    .btn-primary {
-      width: 100%;
-      background: var(--accent);
-      color: var(--bg);
-      font-family: 'Hind Siliguri', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 0.75rem;
-      border: none;
-      border-radius: 0.6rem;
-      cursor: pointer;
-      margin-top: 0.4rem;
-      transition: opacity 0.2s, transform 0.1s;
-    }
+    .btn-primary { width: 100%; background: var(--accent); color: var(--bg); font-family: 'Hind Siliguri', sans-serif; font-size: 0.95rem; font-weight: 600; padding: 0.75rem; border: none; border-radius: 0.6rem; cursor: pointer; margin-top: 0.4rem; transition: opacity 0.2s, transform 0.1s; }
     .btn-primary:hover { opacity: 0.88; }
     .btn-primary:active { transform: scale(0.98); }
     .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
-
-    .form-err {
-      font-size: 0.78rem;
-      color: #d97c7c;
-      margin-bottom: 0.9rem;
-      display: none;
-      line-height: 1.5;
-    }
+    .form-err { font-size: 0.78rem; color: #d97c7c; margin-bottom: 0.9rem; display: none; line-height: 1.5; }
     .form-err.show { display: block; }
 
     /* ─── FAB ─── */
-    .fab {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 3.25rem;
-      height: 3.25rem;
-      border-radius: 50%;
-      background: var(--accent);
-      color: var(--bg);
-      border: none;
-      font-size: 1.6rem;
-      line-height: 1;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 28px var(--shadow);
-      transition: transform 0.25s var(--ease), box-shadow 0.25s;
-      z-index: 90;
-    }
+    .fab { position: fixed; bottom: 2rem; right: 2rem; width: 3.25rem; height: 3.25rem; border-radius: 50%; background: var(--accent); color: var(--bg); border: none; font-size: 1.6rem; line-height: 1; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 6px 28px var(--shadow); transition: transform 0.25s var(--ease), box-shadow 0.25s; z-index: 90; }
     .fab.show { display: flex; }
-    .fab:hover {
-      transform: rotate(45deg) scale(1.06);
-      box-shadow: 0 8px 36px var(--shadow);
-    }
+    .fab:hover { transform: rotate(45deg) scale(1.06); box-shadow: 0 8px 36px var(--shadow); }
 
     /* ─── Toast ─── */
-    .toast {
-      position: fixed;
-      bottom: 2.2rem;
-      left: 50%;
-      transform: translateX(-50%) translateY(5rem);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: 0.85rem;
-      font-weight: 400;
-      padding: 0.65rem 1.5rem;
-      border-radius: 3rem;
-      z-index: 500;
-      white-space: nowrap;
-      box-shadow: 0 4px 24px var(--shadow);
-      transition: transform 0.35s var(--ease);
-      pointer-events: none;
-    }
+    .toast { position: fixed; bottom: 2.2rem; left: 50%; transform: translateX(-50%) translateY(5rem); background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: 0.85rem; font-weight: 400; padding: 0.65rem 1.5rem; border-radius: 3rem; z-index: 500; white-space: nowrap; box-shadow: 0 4px 24px var(--shadow); transition: transform 0.35s var(--ease); pointer-events: none; }
     .toast.show { transform: translateX(-50%) translateY(0); }
-
-    /* ─── Scrollbar ─── */
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
     /* ─── Responsive ─── */
     @media (max-width: 500px) {
-      header { padding: 0 1.25rem; }
-      main   { padding: 5.5rem 1.25rem 5rem; }
-      .home-title  { font-size: 1.75rem; }
-      .read-title  { font-size: 1.5rem; }
-      .read-body   { font-size: 1.05rem; }
-      .fab         { bottom: 1.5rem; right: 1.25rem; }
-      .poem-item-preview { max-width: 22ch; }
-      .modal { padding: 1.75rem 1.5rem; }
+      header { padding: 0 1.25rem; } main { padding: 5.5rem 1.25rem 5rem; }
+      .home-title { font-size: 1.75rem; } .read-title { font-size: 1.5rem; } .read-body { font-size: 1.05rem; }
+      .fab { bottom: 1.5rem; right: 1.25rem; } .poem-item-preview { max-width: 22ch; } .modal { padding: 1.75rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ── Header ── -->
   <header>
     <div class="logo" onclick="showView('home')">
       কলমচি<span class="logo-sub">.পাতা.বাংলা</span>
     </div>
     <div class="header-right">
+      <button class="btn-ghost" id="adminPanelBtn" style="display:none;" onclick="showView('admin')">অ্যাডমিন</button>
       <button class="btn-icon" id="themeBtn" title="থিম পরিবর্তন">🌙</button>
       <button class="btn-ghost" id="authBtn">প্রবেশ</button>
     </div>
   </header>
 
-  <!-- ── Main ── -->
   <main>
 
-    <!-- Home View -->
     <div class="view active" id="homeView">
       <p class="home-eyebrow">ডিজিটাল কবিতার ডায়েরি</p>
       <h1 class="home-title">শব্দের <span>পাতা</span></h1>
@@ -630,26 +357,49 @@
       </div>
     </div>
 
-    <!-- Reading View -->
-    <div class="view" id="readingView">
+    <div class="view" id="adminView">
+      <button class="back-btn" onclick="showView('home')">← পেছনে ফিরুন</button>
+      <p class="read-eyebrow">নিয়ন্ত্রণ কক্ষ</p>
+      <h2 class="read-title">অ্যাডমিন <span>প্যানেল</span></h2>
+      <p class="home-desc">এখান থেকে আপনার প্রকাশিত সব কবিতা মুছে ফেলতে বা পরিচালনা করতে পারবেন।</p>
+      
+      <div id="adminPoemList"></div>
+    </div>
+
+    <article class="view" id="readingView">
       <button class="back-btn" id="backBtn">← পেছনে ফিরুন</button>
       <p class="read-eyebrow" id="readCat"></p>
       <h2 class="read-title"  id="readTitle"></h2>
+      
+      <p class="read-author" id="readAuthor">কলমে: আহনাফ তাহসিন</p>
+      
       <p class="read-meta"    id="readDate"></p>
       <div class="read-rule"></div>
       <div class="read-body"  id="readBody"></div>
-      <div class="read-footer">
+
+      <section class="comments-section">
+        <h3 class="comments-title">মন্তব্য করুন</h3>
+        
+        <div class="comment-form">
+          <input type="text" id="commentName" placeholder="আপনার নাম (ঐচ্ছিক)" class="field-input" />
+          <textarea id="commentText" placeholder="কবিতাটি সম্পর্কে আপনার অনুভূতি লিখুন..." class="field-input field-textarea" style="min-height: 90px;"></textarea>
+          <button class="btn-primary" id="submitCommentBtn">মন্তব্য প্রকাশ করুন</button>
+        </div>
+
+        <div id="commentsList" class="comments-list">
+          </div>
+      </section>
+
+      <footer class="read-footer">
         <span class="read-footer-logo">কলমচি</span>
         <span class="read-footer-glyph">✦ কলমচি.পাতা.বাংলা</span>
-      </div>
-    </div>
+      </footer>
+    </article>
 
   </main>
 
-  <!-- ── FAB ── -->
   <button class="fab" id="fab" title="নতুন কবিতা">+</button>
 
-  <!-- ── Auth Modal ── -->
   <div class="overlay" id="authOverlay">
     <div class="modal">
       <button class="btn-icon modal-x" id="authClose">✕</button>
@@ -668,7 +418,6 @@
     </div>
   </div>
 
-  <!-- ── Add Poem Modal ── -->
   <div class="overlay" id="addOverlay">
     <div class="modal">
       <button class="btn-icon modal-x" id="addClose">✕</button>
@@ -697,51 +446,44 @@
     </div>
   </div>
 
-  <!-- ── Toast ── -->
   <div class="toast" id="toast"></div>
 
-  <!-- ── Firebase + App ── -->
   <script type="module">
     import { initializeApp }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-    import { getFirestore, collection, addDoc, getDocs, query, orderBy, serverTimestamp }
+    import { getFirestore, collection, addDoc, getDocs, query, orderBy, where, serverTimestamp, deleteDoc, doc }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-    /* ─────────────────────────────────────────────
-       🔧  FIREBASE CONFIG — replace with your values
-       Get these from Firebase Console → Project Settings
-    ───────────────────────────────────────────── */
     const firebaseConfig = {
-    apiKey: "AIzaSyDuFrv-F68Jd5tuVc2tAh_H8BwZlgzxsXs",
-    authDomain: "kolomchi-41c3a.firebaseapp.com",
-    projectId: "kolomchi-41c3a",
-    storageBucket: "kolomchi-41c3a.firebasestorage.app",
-    messagingSenderId: "437202114932",
-    appId: "1:437202114932:web:ce6597bc88ce0e7ca6f421"
-  };
+      apiKey: "AIzaSyDuFrv-F68Jd5tuVc2tAh_H8BwZlgzxsXs",
+      authDomain: "kolomchi-41c3a.firebaseapp.com",
+      projectId: "kolomchi-41c3a",
+      storageBucket: "kolomchi-41c3a.firebasestorage.app",
+      messagingSenderId: "437202114932",
+      appId: "1:437202114932:web:ce6597bc88ce0e7ca6f421"
+    };
 
-    /* Admin emails — only these can add poems */
     const ADMINS = new Set(["ahnaftahsin99@gmail.com", "at@ahnaftahsin.ami.bd"]);
 
-    /* ─── Init ─── */
     const app  = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db   = getFirestore(app);
 
-    /* ─── State ─── */
-    let poems   = [];   // full poem list from Firestore
+    let poems   = [];
     let activeCat = "সব";
     let currentUser = null;
+    let currentOpenPoemId = null;
 
-    /* ─── DOM refs ─── */
     const $ = id => document.getElementById(id);
     const authBtn    = $("authBtn");
     const fab        = $("fab");
     const authOverlay= $("authOverlay");
     const addOverlay = $("addOverlay");
     const poemList   = $("poemList");
+    const adminPanelBtn = $("adminPanelBtn");
+    const adminPoemList = $("adminPoemList");
 
     /* ────────────────────────────────
        AUTH STATE
@@ -751,12 +493,19 @@
       if (user) {
         authBtn.textContent = "প্রস্থান";
         authBtn.onclick     = doSignOut;
-        if (ADMINS.has(user.email)) fab.classList.add("show");
+        if (ADMINS.has(user.email)) {
+          fab.classList.add("show");
+          adminPanelBtn.style.display = "inline-block";
+        }
         closeOverlay("authOverlay");
       } else {
         authBtn.textContent = "প্রবেশ";
         authBtn.onclick     = () => openOverlay("authOverlay");
         fab.classList.remove("show");
+        adminPanelBtn.style.display = "none";
+        if(document.getElementById("adminView").classList.contains("active")) {
+          showView("home");
+        }
       }
     });
 
@@ -770,6 +519,7 @@
         const snap = await getDocs(q);
         poems = snap.docs.map(d => ({ id: d.id, ...d.data() }));
         renderList();
+        renderAdminList();
       } catch (e) {
         poemList.innerHTML = `<div class="empty-state"><span class="empty-glyph">⚠</span>ফায়ারবেস কনফিগ পরীক্ষা করুন।<br><small style="font-size:0.72rem;opacity:0.5">${e.message}</small></div>`;
       }
@@ -798,18 +548,127 @@
       });
     }
 
+    function renderAdminList() {
+      if (!poems.length) {
+        adminPoemList.innerHTML = `<div class="empty-state">কোনো কবিতা নেই।</div>`;
+        return;
+      }
+      adminPoemList.innerHTML = `<div class="poem-list">${poems.map(p => `
+        <div class="poem-item">
+          <div>
+            <div class="poem-item-title">${esc(p.title)}</div>
+            <div class="poem-date">${fmt(p.timestamp)}</div>
+          </div>
+          <div class="poem-item-right">
+            <button class="btn-delete" data-id="${p.id}">মুছে ফেলুন</button>
+          </div>
+        </div>`).join("")}
+      </div>`;
+
+      adminPoemList.querySelectorAll(".btn-delete").forEach(btn => {
+        btn.addEventListener("click", async (e) => {
+          if (confirm("আপনি কি নিশ্চিত যে এই কবিতাটি মুছে ফেলতে চান?")) {
+            const id = e.target.dataset.id;
+            try {
+              await deleteDoc(doc(db, "poems", id));
+              poems = poems.filter(p => p.id !== id);
+              renderList();
+              renderAdminList();
+              toast("কবিতা মুছে ফেলা হয়েছে");
+            } catch (err) {
+              toast("ত্রুটি: মুছতে ব্যর্থ হয়েছে");
+            }
+          }
+        });
+      });
+    }
+
     /* ────────────────────────────────
-       READING VIEW
+       READING VIEW & COMMENTS
     ──────────────────────────────── */
     function openPoem(id) {
       const p = poems.find(x => x.id === id);
       if (!p) return;
+      currentOpenPoemId = id; // Set for comments
       $("readCat").textContent   = p.category;
       $("readTitle").textContent = p.title;
       $("readDate").textContent  = fmt(p.timestamp);
       $("readBody").textContent  = p.content;
+      
+      // Update browser title for basic SEO per page
+      document.title = `${p.title} — আহনাফ তাহসিনের কবিতা`;
+      
       showView("reading");
+      loadComments(id);
     }
+
+    async function loadComments(poemId) {
+      const list = $("commentsList");
+      list.innerHTML = `<div class="loading-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+      
+      try {
+        const q = query(collection(db, "comments"), where("poemId", "==", poemId));
+        const snap = await getDocs(q);
+        let commentsData = [];
+        snap.forEach(d => commentsData.push(d.data()));
+        
+        // JavaScript sorting to avoid needing a Firestore composite index immediately
+        commentsData.sort((a, b) => {
+            const tA = a.timestamp ? (a.timestamp.toMillis ? a.timestamp.toMillis() : Date.now()) : 0;
+            const tB = b.timestamp ? (b.timestamp.toMillis ? b.timestamp.toMillis() : Date.now()) : 0;
+            return tB - tA;
+        });
+
+        if (commentsData.length === 0) {
+            list.innerHTML = `<div class="empty-state" style="padding: 2rem 0;">কোনো মন্তব্য নেই। প্রথম মন্তব্যটি করুন!</div>`;
+            return;
+        }
+        
+        list.innerHTML = commentsData.map(data => `
+            <div class="comment-item">
+                <span class="comment-name">${esc(data.name || 'অজ্ঞাত পাঠক')}</span>
+                <span class="comment-date">${fmt(data.timestamp)}</span>
+                <div class="comment-body">${esc(data.text).replace(/\\n/g, "<br>")}</div>
+            </div>`).join("");
+      } catch(e) {
+          console.error("Comments error:", e);
+          list.innerHTML = `<div style="color:#d97c7c; font-size: 0.9rem;">মন্তব্য লোড করতে সমস্যা হয়েছে।</div>`;
+      }
+    }
+
+    $("submitCommentBtn").addEventListener("click", async () => {
+      if (!currentOpenPoemId) return;
+      const nameInput = $("commentName");
+      const textInput = $("commentText");
+      const name = nameInput.value.trim() || "অজ্ঞাত পাঠক";
+      const text = textInput.value.trim();
+      const btn = $("submitCommentBtn");
+
+      if (!text) {
+          toast("অনুগ্রহ করে কিছু মতামত লিখুন!");
+          return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = "প্রকাশ হচ্ছে...";
+
+      try {
+          await addDoc(collection(db, "comments"), {
+              poemId: currentOpenPoemId,
+              name: name,
+              text: text,
+              timestamp: serverTimestamp()
+          });
+          textInput.value = ""; // clear text area only
+          toast("মন্তব্য প্রকাশিত হয়েছে!");
+          loadComments(currentOpenPoemId);
+      } catch(e) {
+          console.error(e);
+          toast("মন্তব্য প্রকাশে ত্রুটি হয়েছে।");
+      }
+      btn.disabled = false;
+      btn.textContent = "মন্তব্য প্রকাশ করুন";
+    });
 
     /* ────────────────────────────────
        CATEGORY FILTER
@@ -829,11 +688,15 @@
       document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
       $(name + "View").classList.add("active");
       window.scrollTo({ top: 0, behavior: "smooth" });
+      
+      if(name === 'admin') renderAdminList();
+      
+      // Reset title if going home
+      if(name === 'home') document.title = "কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি";
     }
     window.showView = showView;
 
     $("backBtn").addEventListener("click", () => showView("home"));
-    document.querySelector(".logo").addEventListener("click", () => showView("home"));
 
     /* ────────────────────────────────
        AUTH MODAL
@@ -906,6 +769,7 @@
         const newPoem = { id: ref.id, title, content, category, timestamp: { toDate: () => new Date() } };
         poems.unshift(newPoem);
         renderList();
+        renderAdminList();
         closeOverlay("addOverlay");
         $("poemTitle").value = "";
         $("poemBody").value  = "";
@@ -925,7 +789,6 @@
     ──────────────────────────────── */
     const themeBtn = $("themeBtn");
     const html     = document.documentElement;
-
     const saved = localStorage.getItem("পাতা-theme") || "dark";
     html.setAttribute("data-theme", saved);
     themeBtn.textContent = saved === "dark" ? "🌙" : "☀️";
@@ -942,15 +805,8 @@
     ──────────────────────────────── */
     function openOverlay(id)  { $(id).classList.add("open"); }
     function closeOverlay(id) { $(id).classList.remove("open"); }
-
-    function esc(str) {
-      return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-    }
-
-    function firstLine(str) {
-      return (str || "").split("\n").find(l => l.trim()) || "";
-    }
-
+    function esc(str) { return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+    function firstLine(str) { return (str || "").split("\n").find(l => l.trim()) || ""; }
     function fmt(ts) {
       if (!ts) return "";
       const d = ts.toDate ? ts.toDate() : new Date(ts);
@@ -966,7 +822,6 @@
       toastTimer = setTimeout(() => el.classList.remove("show"), ms);
     }
 
-    /* ─── Keyboard shortcuts ─── */
     document.addEventListener("keydown", e => {
       if (e.key === "Escape") {
         closeOverlay("authOverlay");
