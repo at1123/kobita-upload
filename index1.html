@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি</title>
+  <meta name="description" content="কলমচি — আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি। বাংলা কবিতা, গজল, হাইকু ও মুক্তছন্দের অপূর্ব সংগ্রহশালা।" />
+  <meta name="keywords" content="কবিতা, বাংলা কবিতা, আহনাফ তাহসিন, Ahnaf Tahsin, কলমচি, গজল, হাইকু, মুক্তছন্দ, বাংলা সাহিত্য, ডিজিটাল ডায়েরি" />
+  <meta name="author" content="Ahnaf Tahsin" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি" />
+  <meta property="og:description" content="আহনাফ তাহসিনের লেখা বাংলা কবিতা, গজল ও হাইকু পড়ুন কলমচি ডায়েরিতে।" />
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23100e0b'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='%23c9a87c' opacity='0.18'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='none' stroke='%23c9a87c' stroke-width='1.7' stroke-linejoin='round'/><line x1='16' y1='16' x2='16' y2='28' stroke='%23c9a87c' stroke-width='1.1' opacity='0.45'/><circle cx='16' cy='4.5' r='2.2' fill='%23c9a87c'/></svg>">
+  <link rel="alternate icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23100e0b'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='%23c9a87c' opacity='0.18'/><path d='M16 4.5L25.5 16L16 28L6.5 16Z' fill='none' stroke='%23c9a87c' stroke-width='1.7' stroke-linejoin='round'/><line x1='16' y1='16' x2='16' y2='28' stroke='%23c9a87c' stroke-width='1.1' opacity='0.45'/><circle cx='16' cy='4.5' r='2.2' fill='%23c9a87c'/></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%23100e0b'/><path d='M90 25L143 90L90 158L37 90Z' fill='%23c9a87c' opacity='0.18'/><path d='M90 25L143 90L90 158L37 90Z' fill='none' stroke='%23c9a87c' stroke-width='9' stroke-linejoin='round'/><line x1='90' y1='90' x2='90' y2='158' stroke='%23c9a87c' stroke-width='6' opacity='0.45'/><circle cx='90' cy='25' r='13' fill='%23c9a87c'/></svg>">
+
+  <meta name="theme-color" content="#080706" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4ede3" media="(prefers-color-scheme: light)" />
+
+  <script>
+    (function() {
+      var t = localStorage.getItem('কলমচি-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600&family=Noto+Serif+Bengali:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ══════════════════════════════════════
+       RESET
+    ══════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ::selection { background: var(--accent-dim); color: var(--accent); }
+
+    /* ══════════════════════════════════════
+       DESIGN TOKENS
+    ══════════════════════════════════════ */
+    :root {
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --dur: 0.35s;
+    }
+
+    [data-theme="dark"] {
+      --bg:          #080706;
+      --bg-rgb:      8, 7, 6;
+      --bg2:         #0f0d0a;
+      --surface:     #161210;
+      --surface2:    #1e1916;
+      --surface3:    #231f1b;
+      --text:        #ddd3c4;
+      --text-dim:    #a89880;
+      --text-muted:  #5e5247;
+      --accent:      #c9a87c;
+      --accent2:     #e8c99a;
+      --accent-dim:  rgba(201,168,124,0.10);
+      --accent-glow: rgba(201,168,124,0.18);
+      --border:      rgba(201,168,124,0.10);
+      --border-soft: rgba(201,168,124,0.06);
+      --shadow:      rgba(0,0,0,0.65);
+      --red:         #d97c7c;
+      --green:       #86c9a4;
+      --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.042'/%3E%3C/svg%3E");
+    }
+
+    [data-theme="light"] {
+      --bg:          #f4ede3;
+      --bg-rgb:      244, 237, 227;
+      --bg2:         #ede4d8;
+      --surface:     #e6ddd0;
+      --surface2:    #ded4c5;
+      --surface3:    #d5cabb;
+      --text:        #1a1612;
+      --text-dim:    #5a4e42;
+      --text-muted:  #9a8878;
+      --accent:      #7a4f28;
+      --accent2:     #a07040;
+      --accent-dim:  rgba(122,79,40,0.09);
+      --accent-glow: rgba(122,79,40,0.16);
+      --border:      rgba(122,79,40,0.13);
+      --border-soft: rgba(122,79,40,0.07);
+      --shadow:      rgba(0,0,0,0.12);
+      --red:         #c0604a;
+      --green:       #4a8c66;
+      --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+    }
+
+    /* ══════════════════════════════════════
+       BASE
+    ══════════════════════════════════════ */
+    html {
+      font-family: 'Hind Siliguri', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      scroll-behavior: smooth;
+      transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+    }
+
+    body {
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: var(--grain);
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* ══════════════════════════════════════
+       READING PROGRESS BAR
+    ══════════════════════════════════════ */
+    #progressBar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      z-index: 999;
+      transition: width 0.08s linear;
+      pointer-events: none;
+      opacity: 0;
+    }
+    #progressBar.visible { opacity: 1; }
+
+    /* ══════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════ */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: 4rem;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(var(--bg-rgb), 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), opacity 0.4s, transform 0.4s;
+    }
+
+    header.zen-hidden {
+      opacity: 0;
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      user-select: none;
+      transition: opacity 0.2s, transform 0.2s;
+      flex-shrink: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .logo:hover { transform: scale(1.02); }
+    .logo-sub {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      vertical-align: super;
+      margin-left: 0.3rem;
+      text-transform: uppercase;
+      -webkit-text-fill-color: var(--text-muted);
+    }
+
+    .header-right { display: flex; align-items: center; gap: 0.5rem; }
+
+    .btn-icon {
+      background: none; border: none; cursor: pointer;
+      color: var(--text-muted);
+      width: 2.2rem; height: 2.2rem;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.25s var(--ease);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .btn-icon:hover { color: var(--accent); background: var(--surface2); transform: scale(1.05); }
+    .btn-icon.active { color: var(--accent); background: var(--accent-dim); }
+
+    .btn-icon .badge {
+      position: absolute; top: 2px; right: 2px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      border: 2px solid var(--bg);
+      display: none;
+    }
+    .btn-icon .badge.show { display: block; }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.8rem; font-weight: 400;
+      padding: 0.35rem 1rem;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+    .btn-ghost:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); transform: translateY(-1px); }
+
+    /* ══════════════════════════════════════
+       SEARCH BAR
+    ══════════════════════════════════════ */
+    #searchBar {
+      position: fixed;
+      top: 4rem; left: 0; right: 0;
+      z-index: 99;
+      background: rgba(var(--bg-rgb), 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.35s var(--spring), opacity 0.3s var(--ease);
+    }
+    #searchBar.open { transform: translateY(0); opacity: 1; pointer-events: all; }
+    
+    #searchInput {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      color: var(--text);
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      padding: 0.65rem 1rem 0.65rem 2.4rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    #searchInput:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-dim); }
+    
+    .search-icon-wrap { position: relative; }
+    .search-icon-wrap::before {
+      content: '⌕';
+      position: absolute;
+      left: 0.85rem; top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      pointer-events: none;
+    }
+    #searchCount { text-align: right; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.4rem; font-weight: 300; }
+
+    /* ══════════════════════════════════════
+       MAIN LAYOUT
+    ══════════════════════════════════════ */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 6.5rem 1.5rem 6rem;
+      transition: padding-top 0.3s var(--ease);
+    }
+    main.search-open { padding-top: 9.5rem; }
+
+    .view { display: none; }
+    .view.active { display: block; animation: fadeUp 0.45s var(--ease) both; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ══════════════════════════════════════
+       HOME — HERO SECTION
+    ══════════════════════════════════════ */
+    .home-eyebrow {
+      font-size: 0.75rem; font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .home-title {
+      font-size: clamp(1.85rem, 5vw, 2.6rem);
+      font-weight: 600; color: var(--text);
+      line-height: 1.18; margin-bottom: 0.5rem;
+    }
+    .home-title span { color: var(--accent); font-weight: 300; }
+
+    .home-desc {
+      font-size: 0.9rem; font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 0.8rem;
+    }
+
+    .home-stats { display: flex; gap: 1.2rem; margin-bottom: 2.2rem; }
+    .stat-pill {
+      font-size: 0.75rem; font-weight: 300;
+      color: var(--text-dim);
+      display: flex; align-items: center; gap: 0.35rem;
+      background: var(--surface2);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2rem;
+      border: 1px solid var(--border-soft);
+    }
+    .stat-pill strong { color: var(--accent); font-weight: 500; }
+
+    /* ══════════════════════════════════════
+       TOOLBAR & CATEGORIES
+    ══════════════════════════════════════ */
+    .list-toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.2rem;
+    }
+
+    .sort-group { display: flex; gap: 0.4rem; }
+    .sort-btn {
+      background: none; border: 1px solid var(--border);
+      color: var(--text-muted); font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.75rem; font-weight: 400; padding: 0.25rem 0.8rem;
+      border-radius: 2rem; cursor: pointer; transition: all 0.25s;
+    }
+    .sort-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
+    .sort-btn.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+
+    .btn-random {
+      background: none; border: none; color: var(--text-muted); 
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.78rem; font-weight: 300; cursor: pointer;
+      display: flex; align-items: center; gap: 0.4rem;
+      padding: 0.2rem 0.5rem; transition: all 0.2s; border-radius: 0.5rem;
+    }
+    .btn-random:hover { color: var(--accent); background: var(--surface2); }
+    .btn-random svg { width: 14px; height: 14px; }
+
+    /* Updated Category Strip */
+    .cat-strip { 
+      display: flex; gap: 0.5rem; flex-wrap: nowrap; 
+      margin-bottom: 1.5rem; overflow-x: auto; 
+      padding-bottom: 0.5rem; scrollbar-width: none; 
+      -ms-overflow-style: none;
+    }
+    .cat-strip::-webkit-scrollbar { display: none; }
+    
+    .cat-btn {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text-muted); font-family: 'Hind Siliguri', sans-serif; 
+      font-size: 0.8rem; font-weight: 400; padding: 0.3rem 0.85rem; 
+      border-radius: 2rem; cursor: pointer; transition: all 0.25s;
+      display: flex; align-items: center; gap: 0.35rem; white-space: nowrap;
+    }
+    .cat-btn:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
+    .cat-btn.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+    .cat-count {
+      background: var(--accent-dim); color: var(--accent);
+      font-size: 0.65rem; padding: 0.05rem 0.4rem;
+      border-radius: 2rem; min-width: 1.2rem; text-align: center; font-weight: 500;
+    }
+
+    /* ══════════════════════════════════════
+       POEM LIST
+    ══════════════════════════════════════ */
+    .poem-list { display: flex; flex-direction: column; }
+
+    .poem-item {
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border-soft);
+      cursor: pointer; display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem; align-items: center;
+      animation: slideIn 0.4s var(--ease) both;
+      transition: all 0.25s var(--ease);
+      position: relative;
+    }
+    .poem-item:first-child { border-top: 1px solid var(--border-soft); }
+    .poem-item::before {
+      content: ''; position: absolute; left: -0.5rem; top: 50%;
+      transform: translateY(-50%) scaleY(0); width: 3px; height: 60%;
+      background: var(--accent); border-radius: 3px; transition: transform 0.25s var(--ease);
+    }
+    .poem-item:hover::before { transform: translateY(-50%) scaleY(1); }
+    .poem-item:hover { padding-left: 0.85rem; background: var(--surface); border-radius: 0.5rem; padding-right: 0.85rem; border-bottom-color: transparent;}
+    .poem-item:hover .poem-item-title { color: var(--accent); }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-15px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .poem-item-title {
+      font-size: 1.08rem; font-weight: 500; color: var(--text);
+      line-height: 1.4; margin-bottom: 0.3rem; transition: color 0.2s;
+    }
+    .poem-item-preview {
+      font-size: 0.85rem; font-weight: 300; color: var(--text-muted);
+      line-height: 1.5; overflow: hidden; white-space: nowrap;
+      text-overflow: ellipsis; max-width: 38ch;
+    }
+    .poem-item-right {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 0.4rem; flex-shrink: 0;
+    }
+    .poem-cat-badge {
+      font-size: 0.7rem; color: var(--accent);
+      border: 1px solid var(--accent-dim); background: var(--accent-dim);
+      padding: 0.15rem 0.6rem; border-radius: 2rem; white-space: nowrap; font-weight: 500;
+    }
+    .poem-date { font-size: 0.7rem; color: var(--text-muted); font-weight: 300; display: flex; align-items: center; gap: 0.4rem;}
+
+    .poem-fav-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: none; }
+    .poem-fav-dot.show { display: block; }
+
+    /* ══════════════════════════════════════
+       EMPTY / LOADING STATES
+    ══════════════════════════════════════ */
+    .empty-state {
+      text-align: center; padding: 5rem 0 3rem;
+      color: var(--text-muted); font-weight: 300; font-size: 0.95rem; line-height: 2.2;
+    }
+    .empty-glyph { font-size: 2.5rem; display: block; margin-bottom: 1rem; opacity: 0.25; color: var(--accent); }
+
+    .loading-row { display: flex; justify-content: center; align-items: center; gap: 6px; padding: 4rem 0; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.4s infinite ease-in-out; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes pulse { 0%,80%,100%{transform:scale(0.7);opacity:0.25} 40%{transform:scale(1);opacity:1} }
+
+    .no-results {
+      text-align: center; padding: 4rem 0;
+      color: var(--text-muted); font-size: 0.9rem; font-weight: 300; line-height: 2;
+    }
+    .no-results em { color: var(--accent); font-style: normal; font-weight: 500;}
+
+    /* ══════════════════════════════════════
+       READING VIEW
+    ══════════════════════════════════════ */
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--text-muted); font-size: 0.85rem; font-weight: 400;
+      font-family: 'Hind Siliguri', sans-serif;
+      background: none; border: none; padding: 0.3rem 0; cursor: pointer;
+      margin-bottom: 2.8rem; transition: color 0.2s;
+    }
+    .back-btn:hover { color: var(--accent); }
+    .back-btn svg { width: 16px; height: 16px; transition: transform 0.2s;}
+    .back-btn:hover svg { transform: translateX(-3px); }
+
+    .read-eyebrow {
+      font-size: 0.75rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.8rem;
+    }
+    .read-title {
+      font-size: clamp(1.65rem, 4.5vw, 2.2rem);
+      font-weight: 600; color: var(--text);
+      line-height: 1.25; margin-bottom: 0.4rem;
+    }
+    .read-author {
+      font-size: 0.9rem; font-weight: 400;
+      color: var(--accent); opacity: 0.8; margin-bottom: 1rem;
+    }
+    .read-meta {
+      font-size: 0.8rem; color: var(--text-muted); font-weight: 300;
+      margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;
+    }
+    .read-meta-sep { opacity: 0.35; }
+    .read-rule {
+      width: 3rem; height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      margin: 1.8rem 0 2.2rem;
+      border-radius: 2px;
+    }
+
+    .read-body {
+      font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+      font-size: 1.15rem; font-weight: 300;
+      line-height: 2.3; color: var(--text);
+      white-space: pre-wrap; word-break: break-word;
+      letter-spacing: 0.01em;
+    }
+
+    .drop-cap-letter { display: block; white-space: pre-wrap; }
+    .drop-cap-letter .first-char {
+      float: left; font-size: 3.8em; line-height: 0.75;
+      margin-right: 0.08em; margin-top: 0.08em;
+      color: var(--accent); font-weight: 500;
+      font-family: 'Noto Serif Bengali', serif;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* ══════════════════════════════════════
+       READING ACTION BAR
+    ══════════════════════════════════════ */
+    .read-actions {
+      display: flex; align-items: center; gap: 0.6rem;
+      margin-top: 3rem; padding: 1.2rem 1.5rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .action-btn {
+      background: var(--bg); border: 1px solid var(--border);
+      color: var(--text-muted); font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.8rem; font-weight: 400; padding: 0.4rem 1rem;
+      border-radius: 2rem; cursor: pointer; transition: all 0.25s;
+      display: flex; align-items: center; gap: 0.4rem; white-space: nowrap;
+    }
+    .action-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--surface); transform: translateY(-1px); }
+    .action-btn.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+    .action-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ══════════════════════════════════════
+       RELATED POEMS & COMMENTS
+    ══════════════════════════════════════ */
+    .related-section, .comments-section {
+      margin-top: 4rem; padding-top: 2rem;
+      border-top: 1px solid var(--border-soft);
+    }
+    .related-title, .comments-title {
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; 
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.2rem;
+    }
+    .related-list { display: flex; flex-direction: column; gap: 0; }
+    .related-item {
+      padding: 1rem 0; border-bottom: 1px solid var(--border-soft);
+      cursor: pointer; display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem; transition: all 0.25s;
+    }
+    .related-item:first-child { border-top: 1px solid var(--border-soft); }
+    .related-item:hover { padding-left: 0.6rem; background: var(--surface); border-radius: 0.4rem; padding-right: 0.6rem; border-bottom-color: transparent;}
+    .related-item:hover .related-item-title { color: var(--accent); }
+    .related-item-title { font-size: 0.95rem; font-weight: 400; color: var(--text); transition: color 0.2s; }
+    .related-item-date { font-size: 0.7rem; color: var(--text-muted); font-weight: 300; flex-shrink: 0; }
+
+    .comments-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+    .comments-count-badge {
+      font-size: 0.7rem; color: var(--accent); border: 1px solid var(--accent-dim); 
+      background: var(--accent-dim); padding: 0.1rem 0.6rem; border-radius: 2rem; font-weight: 500;
+    }
+    .comment-form { display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2.5rem; }
+    .comments-list { display: flex; flex-direction: column; gap: 1rem; }
+    .comment-item {
+      padding: 1.2rem 1.4rem; background: var(--surface2);
+      border-radius: 0.85rem; border: 1px solid var(--border-soft);
+      animation: fadeUp 0.3s var(--ease) both;
+    }
+    .comment-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.6rem; }
+    .comment-name { font-weight: 500; font-size: 0.95rem; color: var(--accent); }
+    .comment-date { font-size: 0.7rem; color: var(--text-muted); font-weight: 300; }
+    .comment-body { font-size: 0.9rem; font-weight: 300; line-height: 1.8; color: var(--text-dim); }
+
+    .read-footer {
+      margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-soft);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .read-footer-logo { font-size: 1.1rem; font-weight: 600; color: var(--accent); opacity: 0.45; }
+    .read-footer-glyph { font-size: 0.75rem; color: var(--text-muted); font-weight: 300; }
+
+    /* ══════════════════════════════════════
+       ADMIN VIEW
+    ══════════════════════════════════════ */
+    .admin-stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .admin-stat-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 0.85rem; padding: 1.2rem; transition: transform 0.25s;
+    }
+    .admin-stat-card:hover { transform: translateY(-3px); border-color: var(--accent-dim); }
+    .admin-stat-label { font-size: 0.7rem; color: var(--text-muted); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .admin-stat-value { font-size: 1.8rem; font-weight: 600; color: var(--accent); line-height: 1; }
+    .admin-stat-sub { font-size: 0.7rem; color: var(--text-dim); font-weight: 300; margin-top: 0.3rem; }
+
+    .admin-section-title { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.2rem; margin-top: 0.5rem; }
+    .btn-delete {
+      background: rgba(217,124,124,0.05); border: 1px solid rgba(217,124,124,0.3);
+      color: var(--red); font-size: 0.75rem; padding: 0.25rem 0.6rem;
+      border-radius: 0.3rem; cursor: pointer; transition: all 0.2s; font-family: 'Hind Siliguri', sans-serif;
+    }
+    .btn-delete:hover { background: rgba(217,124,124,0.15); }
+
+    /* ══════════════════════════════════════
+       MODALS
+    ══════════════════════════════════════ */
+    .overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      z-index: 200; display: flex; align-items: center; justify-content: center;
+      padding: 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease);
+    }
+    .overlay.open { opacity: 1; pointer-events: all; }
+
+    .modal {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 1.2rem; padding: 2.2rem; width: 100%; max-width: 420px;
+      position: relative; transform: translateY(20px) scale(0.98);
+      transition: transform 0.35s var(--spring), background var(--dur);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .overlay.open .modal { transform: translateY(0) scale(1); }
+    .modal-x { position: absolute; top: 1rem; right: 1rem; }
+
+    .modal-title { font-size: 1.25rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+    .modal-sub { font-size: 0.85rem; font-weight: 300; color: var(--text-muted); margin-bottom: 1.8rem; }
+
+    .field { margin-bottom: 1.2rem; }
+    .field-label { display: block; font-size: 0.75rem; font-weight: 500; color: var(--text-muted); margin-bottom: 0.4rem; letter-spacing: 0.05em; }
+    .field-input, .field-select, .field-textarea {
+      width: 100%; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 0.6rem; color: var(--text); font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.95rem; font-weight: 300; padding: 0.7rem 0.9rem; outline: none;
+      transition: all 0.25s; -webkit-appearance: none;
+    }
+    .field-input:focus, .field-select:focus, .field-textarea:focus { border-color: var(--accent); background: var(--surface); box-shadow: 0 0 0 3px var(--accent-dim); }
+    .field-textarea { min-height: 220px; resize: vertical; line-height: 1.85; }
+    .field-select { cursor: pointer; }
+    
+    /* Date input specific fixes for dark mode */
+    input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.8) sepia(1) hue-rotate(350deg) saturate(3); cursor: pointer; }
+
+    .field-footer { display: flex; justify-content: space-between; margin-top: 0.4rem; }
+    .field-counter { font-size: 0.7rem; color: var(--text-muted); font-weight: 300; }
+    .field-counter.warn { color: var(--accent); }
+
+    .btn-primary {
+      width: 100%; background: var(--accent); color: var(--bg);
+      font-family: 'Hind Siliguri', sans-serif; font-size: 0.95rem; font-weight: 600;
+      padding: 0.8rem; border: none; border-radius: 0.6rem; cursor: pointer;
+      margin-top: 0.5rem; transition: all 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 4px 15px var(--accent-dim); }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none;}
+
+    .form-err { font-size: 0.8rem; color: var(--red); margin-bottom: 1rem; display: none; line-height: 1.5; }
+    .form-err.show { display: block; }
+
+    /* ══════════════════════════════════════
+       FAB & TOAST
+    ══════════════════════════════════════ */
+    .fab {
+      position: fixed; bottom: 2rem; right: 2rem; width: 3.5rem; height: 3.5rem;
+      border-radius: 50%; background: var(--accent); color: var(--bg);
+      border: none; font-size: 1.8rem; line-height: 1; cursor: pointer; display: none;
+      align-items: center; justify-content: center; box-shadow: 0 6px 25px rgba(201,168,124,0.4);
+      transition: transform 0.3s var(--spring), box-shadow 0.3s; z-index: 90;
+    }
+    .fab.show { display: flex; }
+    .fab:hover { transform: rotate(90deg) scale(1.08); box-shadow: 0 8px 30px rgba(201,168,124,0.6); }
+
+    .toast {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(5rem);
+      background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+      font-size: 0.85rem; font-weight: 400; padding: 0.7rem 1.5rem; border-radius: 3rem;
+      z-index: 500; white-space: nowrap; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      transition: transform 0.4s var(--spring), opacity 0.3s; pointer-events: none;
+      display: flex; align-items: center; gap: 0.6rem; opacity: 0;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 520px) {
+      header { padding: 0 1.2rem; }
+      main { padding: 6rem 1.2rem 5rem; }
+      main.search-open { padding-top: 8.5rem; }
+      #searchBar { padding: 0.6rem 1.2rem; }
+      .home-title { font-size: 1.7rem; }
+      .read-title { font-size: 1.45rem; }
+      .read-body { font-size: 1.05rem; }
+      .fab { bottom: 1.5rem; right: 1.2rem; width: 3.2rem; height: 3.2rem; font-size: 1.6rem; }
+      .poem-item-preview { max-width: 25ch; }
+      .modal { padding: 1.8rem 1.4rem; }
+      .read-actions { padding: 1.2rem; gap: 0.5rem; justify-content: center;}
+      .admin-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progressBar"></div>
+
+  <button id="scrollTopBtn" title="উপরে যান" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:2rem;left:2rem;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:all 0.3s;z-index:80;">↑</button>
+
+  <header id="mainHeader">
+    <div class="logo" onclick="showView('home')">
+      কলমচি<span class="logo-sub">.পাতা.বাংলা</span>
+    </div>
+    <div class="header-right">
+      <button class="btn-icon" id="searchToggleBtn" title="খুঁজুন (/)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="btn-icon" id="favBtn" title="পছন্দের কবিতা">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="badge" id="favBadge"></span>
+      </button>
+      <button class="btn-icon" id="themeBtn" title="থিম পরিবর্তন">🌙</button>
+      <button class="btn-ghost" id="adminPanelBtn" style="display:none;" onclick="showView('admin')">অ্যাডমিন</button>
+      <button class="btn-ghost" id="authBtn">প্রবেশ</button>
+    </div>
+  </header>
+
+  <div id="searchBar">
+    <div class="search-icon-wrap">
+      <input type="search" id="searchInput" placeholder="কবিতা বা শিরোনাম খুঁজুন…" autocomplete="off" />
+    </div>
+    <div id="searchCount"></div>
+  </div>
+
+  <main id="mainArea">
+
+    <div class="view active" id="homeView">
+      <p class="home-eyebrow">ডিজিটাল কবিতার ডায়েরি</p>
+      <h1 class="home-title">শব্দের <span>পাতা</span></h1>
+      <p class="home-desc">প্রতিটি কবিতা একটি মুহূর্ত — যা শব্দে ধরা পড়েছে।</p>
+      <div class="home-stats">
+        <span class="stat-pill"><strong id="statTotal">০</strong> টি কবিতা</span>
+        <span class="stat-pill"><strong id="statCats">০</strong> টি বিভাগ</span>
+      </div>
+
+      <div class="cat-strip" id="catStrip">
+        <button class="cat-btn active" data-cat="সব">সব <span class="cat-count" id="count-সব">০</span></button>
+        <button class="cat-btn" data-cat="কবিতা">কবিতা <span class="cat-count" id="count-কবিতা">০</span></button>
+        <button class="cat-btn" data-cat="দেশাত্মবোধক">দেশাত্মবোধক <span class="cat-count" id="count-দেশাত্মবোধক">০</span></button>
+        <button class="cat-btn" data-cat="মুক্তছন্দ">মুক্তছন্দ <span class="cat-count" id="count-মুক্তছন্দ">০</span></button>
+        <button class="cat-btn" data-cat="গীতিকবিতা">গীতিকবিতা <span class="cat-count" id="count-গীতিকবিতা">০</span></button>
+        <button class="cat-btn" data-cat="জ্ঞান">জ্ঞান <span class="cat-count" id="count-জ্ঞান">০</span></button>
+        <button class="cat-btn" data-cat="ইসলামিক চেতনা">ইসলামিক চেতনা <span class="cat-count" id="count-ইসলামিক চেতনা">০</span></button>
+        <button class="cat-btn" data-cat="বিপ্লবী">বিপ্লবী <span class="cat-count" id="count-বিপ্লবী">০</span></button>
+        <button class="cat-btn" data-cat="ব্যঙ্গাত্মক">ব্যঙ্গাত্মক <span class="cat-count" id="count-ব্যঙ্গাত্মক">০</span></button>
+        <button class="cat-btn" data-cat="প্রহসন">প্রহসন <span class="cat-count" id="count-প্রহসন">০</span></button>
+      </div>
+
+      <div class="list-toolbar">
+        <div class="sort-group">
+          <button class="sort-btn active" data-sort="newest">নতুন</button>
+          <button class="sort-btn" data-sort="oldest">পুরনো</button>
+          <button class="sort-btn" data-sort="popular">জনপ্রিয়</button>
+          <button class="sort-btn" data-sort="alpha">অ-আ</button>
+        </div>
+        <button class="btn-random" id="randomBtn" title="এলোমেলো কবিতা পড়ুন (r)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+          এলোমেলো
+        </button>
+      </div>
+
+      <div id="poemList">
+        <div class="loading-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+    </div>
+
+    <div class="view" id="favoritesView">
+      <button class="back-btn" onclick="showView('home')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        পেছনে ফিরুন
+      </button>
+      <p class="read-eyebrow">সংরক্ষিত</p>
+      <h2 class="read-title">পছন্দের <span style="color:var(--accent);font-weight:300">কবিতা</span></h2>
+      <p class="home-desc" style="margin-bottom:2rem">আপনার ❤ দেওয়া সব কবিতা এখানে থাকবে।</p>
+      <div id="favPoemList"></div>
+    </div>
+
+    <div class="view" id="adminView">
+      <button class="back-btn" onclick="showView('home')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        পেছনে ফিরুন
+      </button>
+      <p class="read-eyebrow">নিয়ন্ত্রণ কক্ষ</p>
+      <h2 class="read-title">অ্যাডমিন <span style="color:var(--accent);font-weight:300">প্যানেল</span></h2>
+
+      <div class="admin-stats" id="adminStats">
+        <div class="admin-stat-card">
+          <div class="admin-stat-label">মোট কবিতা</div>
+          <div class="admin-stat-value" id="a-total">০</div>
+          <div class="admin-stat-sub">সব বিভাগ মিলিয়ে</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-label">মোট ভিউ</div>
+          <div class="admin-stat-value" id="a-views">০</div>
+          <div class="admin-stat-sub">সর্বমোট পঠিত</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="admin-stat-label">বিভাগ</div>
+          <div class="admin-stat-value" id="a-cats">০</div>
+          <div class="admin-stat-sub">সক্রিয় বিভাগ</div>
+        </div>
+      </div>
+      <p class="admin-section-title">সব কবিতা</p>
+      <div id="adminPoemList"></div>
+    </div>
+
+    <article class="view" id="readingView">
+      <button class="back-btn" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+        পেছনে ফিরুন
+      </button>
+
+      <p class="read-eyebrow" id="readCat"></p>
+      <h2 class="read-title" id="readTitle"></h2>
+      <p class="read-author">কলমে: আহনাফ তাহসিন</p>
+      <p class="read-meta" id="readMeta"></p>
+      <div class="read-rule"></div>
+      <div class="read-body" id="readBody"></div>
+
+      <div class="read-actions">
+        <button class="action-btn" id="favActionBtn" onclick="toggleFavFromReading()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          সংরক্ষণ
+        </button>
+        <button class="action-btn" id="copyBtn" onclick="copyPoem()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          কপি
+        </button>
+        <button class="action-btn" id="shareBtn" onclick="sharePoem()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          শেয়ার
+        </button>
+      </div>
+
+      <section class="related-section" id="relatedSection">
+        <p class="related-title">একই বিভাগের আরও কবিতা</p>
+        <div class="related-list" id="relatedList"></div>
+      </section>
+
+      <section class="comments-section">
+        <div class="comments-header">
+          <p class="comments-title">মন্তব্য</p>
+          <span class="comments-count-badge" id="commentsCountBadge">০</span>
+        </div>
+        <div class="comment-form">
+          <input type="text" id="commentName" placeholder="আপনার নাম (ঐচ্ছিক)" class="field-input" />
+          <textarea id="commentText" placeholder="কবিতাটি সম্পর্কে আপনার অনুভূতি লিখুন…" class="field-input field-textarea" style="min-height:90px;"></textarea>
+          <button class="btn-primary" id="submitCommentBtn">মন্তব্য প্রকাশ করুন</button>
+        </div>
+        <div id="commentsList" class="comments-list"></div>
+      </section>
+
+      <footer class="read-footer">
+        <span class="read-footer-logo">কলমচি</span>
+        <span class="read-footer-glyph">✦ কলমচি.পাতা.বাংলা</span>
+      </footer>
+    </article>
+
+  </main>
+
+  <button class="fab" id="fab" title="নতুন কবিতা যোগ করুন">+</button>
+
+  <div class="overlay" id="authOverlay">
+    <div class="modal">
+      <button class="btn-icon modal-x" id="authClose">✕</button>
+      <h2 class="modal-title">প্রবেশ করুন</h2>
+      <p class="modal-sub">আহনাফের ডায়েরিতে প্রবেশের জন্য লগইন করুন</p>
+      <p class="form-err" id="authErr"></p>
+      <div class="field">
+        <label class="field-label">ইমেইল ঠিকানা</label>
+        <input type="email" class="field-input" id="authEmail" placeholder="you@example.com" autocomplete="email" />
+      </div>
+      <div class="field">
+        <label class="field-label">পাসওয়ার্ড</label>
+        <input type="password" class="field-input" id="authPass" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <button class="btn-primary" id="authSubmit">প্রবেশ করুন</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="addOverlay">
+    <div class="modal" style="max-width:480px">
+      <button class="btn-icon modal-x" id="addClose">✕</button>
+      <h2 class="modal-title">নতুন কবিতা</h2>
+      <p class="modal-sub">একটি নতুন কবিতা প্রকাশ করুন</p>
+      <p class="form-err" id="addErr"></p>
+      
+      <div class="field">
+        <label class="field-label">শিরোনাম</label>
+        <input type="text" class="field-input" id="poemTitle" placeholder="কবিতার শিরোনাম…" maxlength="80" />
+        <div class="field-footer">
+          <span></span>
+          <span class="field-counter" id="titleCounter">০/৮০</span>
+        </div>
+      </div>
+      
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+        <div class="field">
+          <label class="field-label">বিভাগ</label>
+          <select class="field-select" id="poemCat">
+            <option value="কবিতা">কবিতা</option>
+            <option value="দেশাত্মবোধক">দেশাত্মবোধক</option>
+            <option value="মুক্তছন্দ">মুক্তছন্দ</option>
+            <option value="গীতিকবিতা">গীতিকবিতা</option>
+            <option value="জ্ঞান">জ্ঞান</option>
+            <option value="ইসলামিক চেতনা">ইসলামিক চেতনা</option>
+            <option value="বিপ্লবী">বিপ্লবী</option>
+            <option value="ব্যঙ্গাত্মক">ব্যঙ্গাত্মক</option>
+            <option value="প্রহসন">প্রহসন</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label">প্রকাশের তারিখ</label>
+          <input type="date" class="field-input" id="poemDate" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">কবিতার লেখা</label>
+        <textarea class="field-input field-textarea" id="poemBody" placeholder="এখানে কবিতা লিখুন…&#10;প্রতিটি লাইন নতুন লাইনে।"></textarea>
+        <div class="field-footer">
+          <span class="field-counter" id="lineCounter">০ লাইন</span>
+          <span class="field-counter" id="wordCounter">০ শব্দ</span>
+        </div>
+      </div>
+      <button class="btn-primary" id="addSubmit">প্রকাশ করুন ✦</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon" id="toastIcon"></span>
+    <span id="toastMsg"></span>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getFirestore, collection, addDoc, getDocs, query, orderBy, where, serverTimestamp, deleteDoc, doc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDuFrv-F68Jd5tuVc2tAh_H8BwZlgzxsXs",
+      authDomain: "kolomchi-41c3a.firebaseapp.com",
+      projectId: "kolomchi-41c3a",
+      storageBucket: "kolomchi-41c3a.firebasestorage.app",
+      messagingSenderId: "437202114932",
+      appId: "1:437202114932:web:ce6597bc88ce0e7ca6f421"
+    };
+
+    const ADMINS = new Set(["ahnaftahsin99@gmail.com", "at@ahnaftahsin.ami.bd"]);
+
+    const app  = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db   = getFirestore(app);
+
+    let poems           = [];
+    let activeCat       = "সব";
+    let activeSort      = "newest";
+    let searchQuery     = "";
+    let currentUser     = null;
+    let currentPoemId   = null;
+    let isSearchOpen    = false;
+    let favorites       = JSON.parse(localStorage.getItem("kolomchi-favs") || "[]");
+    let prevView        = "home";
+
+    const $  = id => document.getElementById(id);
+    const authBtn       = $("authBtn");
+    const fab           = $("fab");
+    const authOverlay   = $("authOverlay");
+    const addOverlay    = $("addOverlay");
+    const poemList      = $("poemList");
+    const adminPanelBtn = $("adminPanelBtn");
+    const adminPoemList = $("adminPoemList");
+    const searchBar     = $("searchBar");
+    const searchInput   = $("searchInput");
+    const mainArea      = $("mainArea");
+    const progressBar   = $("progressBar");
+
+    onAuthStateChanged(auth, user => {
+      currentUser = user;
+      if (user) {
+        authBtn.textContent = "প্রস্থান";
+        authBtn.onclick     = doSignOut;
+        if (ADMINS.has(user.email)) {
+          fab.classList.add("show");
+          adminPanelBtn.style.display = "inline-block";
+        }
+        closeOverlay("authOverlay");
+      } else {
+        authBtn.textContent = "প্রবেশ";
+        authBtn.onclick     = () => openOverlay("authOverlay");
+        fab.classList.remove("show");
+        adminPanelBtn.style.display = "none";
+        if ($("adminView").classList.contains("active")) showView("home");
+      }
+    });
+
+    async function loadPoems() {
+      poemList.innerHTML = `<div class="loading-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+      try {
+        const q    = query(collection(db, "poems"), orderBy("timestamp", "desc"));
+        const snap = await getDocs(q);
+        poems = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        // Sort explicitly by publishDate if available
+        poems.sort((a, b) => getSortTime(b) - getSortTime(a));
+        updateStats(); renderList(); renderAdminList();
+      } catch (e) {
+        poemList.innerHTML = `<div class="empty-state"><span class="empty-glyph">⚠</span>ফায়ারবেস লোড করতে সমস্যা হচ্ছে।<br><small style="font-size:0.7rem;opacity:0.4">${e.message}</small></div>`;
+      }
+    }
+
+    function getSortTime(p) {
+      if (p.publishDate && p.publishDate.toMillis) return p.publishDate.toMillis();
+      if (p.publishDate) return new Date(p.publishDate).getTime();
+      if (p.timestamp && p.timestamp.toMillis) return p.timestamp.toMillis();
+      return 0;
+    }
+
+    function updateStats() {
+      const total = poems.length;
+      let totalViews = 0;
+      const cats  = [...new Set(poems.map(p => p.category))].filter(Boolean);
+      $("statTotal").textContent = toBnNum(total);
+      $("statCats").textContent  = toBnNum(cats.length);
+
+      const catCounts = { "সব": total };
+      poems.forEach(p => { 
+        catCounts[p.category] = (catCounts[p.category] || 0) + 1; 
+        totalViews += (p.views || 0);
+      });
+      
+      document.querySelectorAll(".cat-count").forEach(el => {
+        const c = el.id.replace('count-', '');
+        el.textContent = toBnNum(catCounts[c] || 0);
+      });
+
+      $("a-total").textContent = toBnNum(total);
+      $("a-cats").textContent  = toBnNum(cats.length);
+      $("a-views").textContent = toBnNum(totalViews);
+      $("favBadge").classList.toggle("show", favorites.length > 0);
+    }
+
+    function getFiltered() {
+      let result = activeCat === "সব" ? poems : poems.filter(p => p.category === activeCat);
+      if (searchQuery) {
+        const q = searchQuery.trim().toLowerCase();
+        result = result.filter(p => p.title.toLowerCase().includes(q) || (p.content||"").toLowerCase().includes(q));
+      }
+      const copy = [...result];
+      if (activeSort === "newest") copy.sort((a,b) => getSortTime(b) - getSortTime(a));
+      else if (activeSort === "oldest") copy.sort((a,b) => getSortTime(a) - getSortTime(b));
+      else if (activeSort === "popular") copy.sort((a,b) => (b.views || 0) - (a.views || 0));
+      else if (activeSort === "alpha") copy.sort((a,b) => (a.title||"").localeCompare(b.title||"", "bn"));
+      return copy;
+    }
+
+    function renderList() {
+      const filtered = getFiltered();
+      if (searchQuery && filtered.length === 0) {
+        poemList.innerHTML = `<div class="no-results">"<em>${esc(searchQuery)}</em>" — খুঁজে পাওয়া যায়নি।</div>`;
+        return;
+      }
+      if (!filtered.length) {
+        poemList.innerHTML = `<div class="empty-state"><span class="empty-glyph">৻</span>এখানে এখনও কোনো কবিতা নেই।</div>`;
+        return;
+      }
+
+      poemList.innerHTML = `<div class="poem-list">${filtered.map((p, i) => `
+        <div class="poem-item" data-id="${p.id}" style="animation-delay:${Math.min(i*30, 300)}ms">
+          <div>
+            <div class="poem-item-title">${esc(p.title)}</div>
+            <div class="poem-item-preview">${esc(firstLine(p.content))}</div>
+          </div>
+          <div class="poem-item-right">
+            <div class="poem-fav-dot ${favorites.includes(p.id)?'show':''}"></div>
+            <span class="poem-cat-badge">${esc(p.category)}</span>
+            <span class="poem-date"><span title="ভিউ" style="color:var(--accent);font-size:0.8rem">👁</span> ${toBnNum(p.views || 0)} &nbsp;|&nbsp; ${fmt(p.publishDate || p.timestamp)}</span>
+          </div>
+        </div>`).join("")}
+      </div>`;
+
+      poemList.querySelectorAll(".poem-item").forEach(el => el.addEventListener("click", () => openPoem(el.dataset.id)));
+      $("searchCount").textContent = searchQuery ? toBnNum(filtered.length) + " টি কবিতা পাওয়া গেছে" : "";
+    }
+
+    function renderAdminList() {
+      if (!poems.length) { adminPoemList.innerHTML = `<div class="empty-state">কোনো কবিতা নেই।</div>`; return; }
+      adminPoemList.innerHTML = `<div class="poem-list">${poems.map(p => `
+        <div class="poem-item" style="cursor:default">
+          <div>
+            <div class="poem-item-title">${esc(p.title)} <span style="font-size:0.75rem;color:var(--text-muted);font-weight:300;">(👁 ${toBnNum(p.views||0)})</span></div>
+            <div style="display:flex;gap:0.5rem;align-items:center;margin-top:0.2rem">
+              <span class="poem-cat-badge" style="font-size:0.65rem">${esc(p.category)}</span>
+              <span class="poem-date">${fmt(p.publishDate || p.timestamp)}</span>
+            </div>
+          </div>
+          <div class="poem-item-right"><button class="btn-delete" data-id="${p.id}">মুছুন</button></div>
+        </div>`).join("")}</div>`;
+
+      adminPoemList.querySelectorAll(".btn-delete").forEach(btn => {
+        btn.addEventListener("click", async e => {
+          if (!confirm("এই কবিতাটি চিরতরে মুছে ফেলবেন?")) return;
+          const id = e.target.dataset.id;
+          try {
+            await deleteDoc(doc(db, "poems", id));
+            poems = poems.filter(p => p.id !== id);
+            favorites = favorites.filter(f => f !== id);
+            localStorage.setItem("kolomchi-favs", JSON.stringify(favorites));
+            updateStats(); renderList(); renderAdminList(); toast("মুছে ফেলা হয়েছে", "✓");
+          } catch { toast("ব্যর্থ হয়েছে", "✕"); }
+        });
+      });
+    }
+
+    function renderFavorites() {
+      const favPoems = poems.filter(p => favorites.includes(p.id));
+      const container = $("favPoemList");
+      if (!favPoems.length) {
+        container.innerHTML = `<div class="fav-empty"><span class="empty-glyph">♡</span>এখনও কোনো কবিতা সংরক্ষণ করেননি।</div>`; return;
+      }
+      container.innerHTML = `<div class="poem-list">${favPoems.map((p,i) => `
+        <div class="poem-item" data-id="${p.id}" style="animation-delay:${i*30}ms">
+          <div>
+            <div class="poem-item-title">${esc(p.title)}</div>
+            <div class="poem-item-preview">${esc(firstLine(p.content))}</div>
+          </div>
+          <div class="poem-item-right">
+            <span class="poem-cat-badge">${esc(p.category)}</span>
+            <span class="poem-date">${fmt(p.publishDate || p.timestamp)}</span>
+          </div>
+        </div>`).join("")}</div>`;
+      container.querySelectorAll(".poem-item").forEach(el => el.addEventListener("click", () => { prevView = "favorites"; openPoem(el.dataset.id); }));
+    }
+
+    async function openPoem(id) {
+      const p = poems.find(x => x.id === id);
+      if (!p) return;
+      currentPoemId = id;
+      
+      try { // Real-time View increment
+        await updateDoc(doc(db, "poems", id), { views: increment(1) });
+        p.views = (p.views || 0) + 1;
+      } catch (e) { console.warn("View update ignored"); }
+
+      $("readCat").textContent   = p.category;
+      $("readTitle").textContent = p.title;
+
+      const lines = (p.content||"").split("\n").filter(l => l.trim()).length;
+      const words = (p.content||"").trim().split(/\s+/).length;
+      const mins  = Math.max(1, Math.ceil(words / 80));
+
+      $("readMeta").innerHTML = `
+        <span>${fmt(p.publishDate || p.timestamp)}</span>
+        <span class="read-meta-sep">·</span>
+        <span>${toBnNum(lines)} লাইন</span>
+        <span class="read-meta-sep">·</span>
+        <span>~${toBnNum(mins)} মিনিট</span>
+        <span class="read-meta-sep">·</span>
+        <span style="color:var(--accent);">👁 ${toBnNum(p.views || 0)} ভিউ</span>
+      `;
+
+      const firstChar = (p.content || " ").charAt(0);
+      const rest = (p.content || " ").slice(1);
+      $("readBody").innerHTML = `<span class="drop-cap-letter"><span class="first-char">${esc(firstChar)}</span>${esc(rest)}</span>`;
+
+      updateFavBtn(id); document.title = `${p.title} — কলমচি`;
+      showView("reading"); renderRelated(p); loadComments(id);
+    }
+
+    function renderRelated(currentPoem) {
+      const related = poems.filter(p => p.id !== currentPoem.id && p.category === currentPoem.category).slice(0, 4);
+      if (!related.length) { $("relatedSection").style.display = "none"; return; }
+      $("relatedSection").style.display = "block";
+      $("relatedList").innerHTML = related.map(p => `
+        <div class="related-item" data-id="${p.id}">
+          <span class="related-item-title">${esc(p.title)}</span>
+          <span class="related-item-date">${fmt(p.publishDate || p.timestamp)}</span>
+        </div>`).join("");
+      $("relatedList").querySelectorAll(".related-item").forEach(el => el.addEventListener("click", () => openPoem(el.dataset.id)));
+    }
+
+    function updateFavBtn(id) {
+      const btn = $("favActionBtn"), isFav = favorites.includes(id);
+      btn.classList.toggle("active", isFav);
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="${isFav?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> ${isFav?'সংরক্ষিত':'সংরক্ষণ'}`;
+    }
+
+    window.toggleFavFromReading = function() {
+      if (!currentPoemId) return;
+      const idx = favorites.indexOf(currentPoemId);
+      if (idx > -1) { favorites.splice(idx, 1); toast("সংগ্রহ থেকে সরানো হয়েছে", "♡"); } 
+      else { favorites.push(currentPoemId); toast("সংরক্ষণ করা হয়েছে!", "❤"); }
+      localStorage.setItem("kolomchi-favs", JSON.stringify(favorites));
+      updateFavBtn(currentPoemId); updateStats(); renderList();
+    };
+
+    window.copyPoem = async function() {
+      const p = poems.find(x => x.id === currentPoemId);
+      if (!p) return;
+      try { await navigator.clipboard.writeText(`${p.title}\n\n${p.content}\n\n— আহনাফ তাহসিন | কলমচি`); toast("কপি করা হয়েছে!", "📋"); } 
+      catch { toast("ব্যর্থ হয়েছে", "✕"); }
+    };
+
+    window.sharePoem = async function() {
+      const p = poems.find(x => x.id === currentPoemId);
+      if (!p) return;
+      try {
+        if (navigator.share) await navigator.share({ title: p.title+" — কলমচি", text: firstLine(p.content)+"…", url: window.location.href });
+        else { await navigator.clipboard.writeText(window.location.href); toast("লিংক কপি হয়েছে!", "🔗"); }
+      } catch {}
+    };
+
+    async function loadComments(poemId) {
+      const list = $("commentsList");
+      list.innerHTML = `<div class="loading-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+      try {
+        const snap = await getDocs(query(collection(db, "comments"), where("poemId", "==", poemId)));
+        let data = []; snap.forEach(d => data.push(d.data()));
+        data.sort((a,b) => (b.timestamp?.toMillis?.()||0) - (a.timestamp?.toMillis?.()||0));
+        $("commentsCountBadge").textContent = toBnNum(data.length);
+        if (!data.length) { list.innerHTML = `<div style="color:var(--text-muted);font-size:0.85rem;padding:1.5rem 0;text-align:center;">এখনো কোনো মন্তব্য নেই।</div>`; return; }
+        list.innerHTML = data.map(d => `
+          <div class="comment-item">
+            <div class="comment-top"><span class="comment-name">${esc(d.name||'অজ্ঞাত পাঠক')}</span><span class="comment-date">${fmt(d.timestamp)}</span></div>
+            <div class="comment-body">${esc(d.text).replace(/\n/g,"<br>")}</div>
+          </div>`).join("");
+      } catch (e) { list.innerHTML = `<div style="color:var(--red);font-size:0.85rem;padding:1rem 0">সমস্যা হয়েছে।</div>`; }
+    }
+
+    $("submitCommentBtn").addEventListener("click", async () => {
+      if (!currentPoemId) return;
+      const name = $("commentName").value.trim() || "অজ্ঞাত পাঠক", text = $("commentText").value.trim(), btn = $("submitCommentBtn");
+      if (!text) { toast("কিছু লিখুন!", "✏"); return; }
+      btn.disabled = true; btn.textContent = "প্রকাশ হচ্ছে…";
+      try {
+        await addDoc(collection(db, "comments"), { poemId: currentPoemId, name, text, timestamp: serverTimestamp() });
+        $("commentText").value = ""; toast("প্রকাশিত হয়েছে!", "✓"); loadComments(currentPoemId);
+      } catch { toast("ত্রুটি হয়েছে", "✕"); }
+      btn.disabled = false; btn.textContent = "মন্তব্য প্রকাশ করুন";
+    });
+
+    $("catStrip").addEventListener("click", e => {
+      const btn = e.target.closest(".cat-btn");
+      if (!btn) return;
+      activeCat = btn.dataset.cat;
+      document.querySelectorAll(".cat-btn").forEach(b => b.classList.toggle("active", b === btn));
+      renderList();
+    });
+
+    document.querySelectorAll(".sort-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        activeSort = btn.dataset.sort;
+        document.querySelectorAll(".sort-btn").forEach(b => b.classList.toggle("active", b === btn));
+        renderList();
+      });
+    });
+
+    $("randomBtn").addEventListener("click", () => {
+      if (poems.length) openPoem(poems[Math.floor(Math.random() * poems.length)].id);
+    });
+
+    $("searchToggleBtn").addEventListener("click", () => {
+      isSearchOpen = !isSearchOpen; searchBar.classList.toggle("open", isSearchOpen); mainArea.classList.toggle("search-open", isSearchOpen);
+      $("searchToggleBtn").classList.toggle("active", isSearchOpen);
+      if (isSearchOpen) setTimeout(() => searchInput.focus(), 200);
+      else { searchQuery = ""; searchInput.value = ""; $("searchCount").textContent = ""; renderList(); }
+    });
+
+    searchInput.addEventListener("input", () => { searchQuery = searchInput.value; if (!$("homeView").classList.contains("active")) showView("home"); renderList(); });
+
+    $("favBtn").addEventListener("click", () => { prevView = "home"; showView("favorites"); });
+
+    window.showView = function(name) {
+      document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
+      $(name + "View").classList.add("active"); window.scrollTo({ top: 0, behavior: "smooth" });
+      progressBar.classList.remove("visible"); progressBar.style.width = "0%";
+      if (name === "admin") renderAdminList();
+      if (name === "favorites") renderFavorites();
+      if (name === "home") document.title = "কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি";
+    };
+
+    $("backBtn").addEventListener("click", () => { showView(prevView || "home"); prevView = "home"; });
+
+    window.addEventListener("scroll", () => {
+      if ($("readingView").classList.contains("active")) {
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + "%";
+        progressBar.classList.add("visible");
+      } else { progressBar.classList.remove("visible"); progressBar.style.width = "0%"; }
+      $("scrollTopBtn").style.opacity = window.scrollY > 400 ? '1' : '0';
+      $("scrollTopBtn").style.pointerEvents = window.scrollY > 400 ? 'all' : 'none';
+    });
+
+    authBtn.onclick = () => openOverlay("authOverlay");
+    $("authClose").addEventListener("click", () => closeOverlay("authOverlay"));
+    authOverlay.addEventListener("click", e => { if(e.target===authOverlay) closeOverlay("authOverlay"); });
+    $("authSubmit").addEventListener("click", async () => {
+      const btn = $("authSubmit"), err = $("authErr"); err.classList.remove("show"); btn.disabled = true; btn.textContent = "অপেক্ষা করুন…";
+      try { await signInWithEmailAndPassword(auth, $("authEmail").value.trim(), $("authPass").value); toast("স্বাগতম! ✦", "✦"); }
+      catch { err.textContent = "ভুল তথ্য। আবার চেষ্টা করুন।"; err.classList.add("show"); }
+      btn.disabled = false; btn.textContent = "প্রবেশ করুন";
+    });
+
+    async function doSignOut() { await signOut(auth); toast("প্রস্থান সম্পন্ন", "✓"); }
+
+    fab.addEventListener("click", () => {
+      // Set default date to today
+      const today = new Date();
+      // adjust to local timezone string format YYYY-MM-DD
+      const offset = today.getTimezoneOffset() * 60000;
+      const localISOTime = (new Date(today - offset)).toISOString().split('T')[0];
+      $("poemDate").value = localISOTime;
+      
+      openOverlay("addOverlay");
+    });
+    
+    $("addClose").addEventListener("click", () => closeOverlay("addOverlay"));
+    addOverlay.addEventListener("click", e => { if(e.target===addOverlay) closeOverlay("addOverlay"); });
+    
+    $("poemTitle").addEventListener("input", function() {
+      $("titleCounter").textContent = `${toBnNum(this.value.length)}/৮০`; $("titleCounter").classList.toggle("warn", this.value.length > 65);
+    });
+    $("poemBody").addEventListener("input", function() {
+      $("lineCounter").textContent = toBnNum(this.value.split("\n").filter(l=>l.trim()).length) + " লাইন";
+      $("wordCounter").textContent = toBnNum(this.value.trim() ? this.value.trim().split(/\s+/).length : 0) + " শব্দ";
+    });
+
+    $("addSubmit").addEventListener("click", async () => {
+      const title = $("poemTitle").value.trim(), content = $("poemBody").value.trim(), category = $("poemCat").value, btn = $("addSubmit"), err = $("addErr");
+      const userDateStr = $("poemDate").value;
+      
+      err.classList.remove("show");
+      if (!title || !content) { err.textContent = "শিরোনাম ও লেখা দিন।"; err.classList.add("show"); return; }
+      if (!currentUser || !ADMINS.has(currentUser.email)) { err.textContent = "অনুমতি নেই।"; err.classList.add("show"); return; }
+      
+      btn.disabled = true; btn.textContent = "প্রকাশ হচ্ছে…";
+      try {
+        const publishDateObj = userDateStr ? new Date(userDateStr) : new Date();
+        const ref = await addDoc(collection(db, "poems"), { 
+          title, content, category, views: 0,
+          publishDate: publishDateObj,
+          timestamp: serverTimestamp() 
+        });
+        poems.push({ id: ref.id, title, content, category, views: 0, publishDate: publishDateObj, timestamp: { toDate: () => new Date() } });
+        poems.sort((a, b) => getSortTime(b) - getSortTime(a));
+        updateStats(); renderList(); renderAdminList(); closeOverlay("addOverlay");
+        $("poemTitle").value = ""; $("poemBody").value = ""; toast("প্রকাশিত হয়েছে ✦", "✦");
+      } catch (e) { err.textContent = "ব্যর্থ হয়েছে।"; err.classList.add("show"); console.log(e); }
+      btn.disabled = false; btn.textContent = "প্রকাশ করুন ✦";
+    });
+
+    const html = document.documentElement, themeBtn = $("themeBtn");
+    themeBtn.textContent = html.getAttribute("data-theme") === "dark" ? "🌙" : "☀️";
+    themeBtn.addEventListener("click", () => {
+      const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", next); themeBtn.textContent = next === "dark" ? "🌙" : "☀️"; localStorage.setItem("কলমচি-theme", next);
+    });
+
+    function openOverlay(id) { $(id).classList.add("open"); }
+    function closeOverlay(id) { $(id).classList.remove("open"); }
+    function esc(str) { return String(str||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+    function firstLine(str) { return (str||"").split("\n").find(l => l.trim()) || ""; }
+    
+    function fmt(ts) {
+      if (!ts) return "";
+      const d = ts.toDate ? ts.toDate() : new Date(ts);
+      if (isNaN(d)) return "";
+      return d.toLocaleDateString("bn-BD", { year:"numeric", month:"long", day:"numeric" });
+    }
+    
+    function toBnNum(n) { return String(n).replace(/[0-9]/g, d => "০১২৩৪৫৬৭৮৯"[+d]); }
+
+    let toastTimer;
+    function toast(msg, icon = "", ms = 2700) {
+      $("toastMsg").textContent = msg; $("toastIcon").textContent = icon;
+      const el = $("toast"); el.classList.add("show");
+      clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove("show"), ms);
+    }
+
+    loadPoems();
+  </script>
+</body>
+</html>
