@@ -11,7 +11,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি" />
   <meta property="og:description" content="আহনাফ তাহসিনের লেখা বাংলা কবিতা পড়ুন কলমচি ডায়েরিতে।" />
-  <meta property="og:url" content="https://kolomchi-41c3a.web.app/" />
+  <meta property="og:url" content="https://kolomci.pro.bd/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#07060a" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#f0e8dc" media="(prefers-color-scheme: light)" />
@@ -855,13 +855,121 @@
 
     /* ══════════════════════════════════════ PRINT ══════════════════════════════════════ */
     @media print {
+      *, *::before, *::after { box-sizing: border-box !important; }
+
       header, #searchBar, .fab, .toast, .zen-exit, #scrollTopBtn,
       .back-btn, .read-actions, .related-section, .comments-section,
-      #progressBar, body::before, body::after, .deco-lines { display: none !important; }
-      body { background: white; color: black; }
-      main { padding: 2rem; max-width: 100%; }
-      .read-body { font-size: 12pt; line-height: 2.3; }
-      .read-title { font-size: 22pt; }
+      #progressBar, body::before, body::after, .deco-lines,
+      .home-hero, .cat-strip-wrap, .list-toolbar, #poemList,
+      #homeView, #favoritesView, #adminView { display: none !important; }
+
+      html, body {
+        background: #fff !important;
+        color: #111 !important;
+        font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif !important;
+        font-size: 12pt !important;
+        margin: 0 !important; padding: 0 !important;
+      }
+
+      main {
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+
+      #readingView {
+        display: block !important;
+        padding: 2.5cm 2.5cm 3cm !important;
+        animation: none !important;
+      }
+
+      .read-eyebrow {
+        font-size: 8pt !important;
+        color: #888 !important;
+        letter-spacing: 0.25em !important;
+        text-transform: uppercase !important;
+        margin-bottom: 0.4cm !important;
+        display: block !important;
+        border: none !important;
+      }
+      .read-eyebrow::before { display: none !important; }
+
+      .read-title {
+        font-size: 24pt !important;
+        font-weight: 700 !important;
+        color: #111 !important;
+        line-height: 1.25 !important;
+        margin-bottom: 0.3cm !important;
+        font-family: 'Noto Serif Bengali', serif !important;
+        page-break-after: avoid !important;
+      }
+
+      .read-author {
+        font-size: 10pt !important;
+        color: #555 !important;
+        opacity: 1 !important;
+        margin-bottom: 0.4cm !important;
+        display: block !important;
+      }
+      .read-author::before { content: '— '; }
+
+      .read-meta {
+        font-size: 8.5pt !important;
+        color: #888 !important;
+        margin-bottom: 0.5cm !important;
+        gap: 0.5em !important;
+      }
+      .read-meta .read-views { display: none !important; }
+
+      .read-divider {
+        margin: 0.6cm 0 !important;
+        border-top: 1px solid #ccc !important;
+      }
+      .read-divider::before, .read-divider::after { display: none !important; }
+      .read-divider-glyph { color: #999 !important; }
+
+      .read-body {
+        font-family: 'Noto Serif Bengali', serif !important;
+        font-size: 13pt !important;
+        line-height: 2.4 !important;
+        color: #111 !important;
+        white-space: pre-wrap !important;
+        word-break: break-word !important;
+      }
+
+      .drop-cap-letter .first-char {
+        float: left !important;
+        font-size: 3.6em !important;
+        line-height: 0.75 !important;
+        margin-right: 0.05em !important;
+        margin-top: 0.1em !important;
+        color: #444 !important;
+      }
+
+      /* Print footer */
+      #readingView > footer.read-footer {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-top: 1.5cm !important;
+        padding-top: 0.4cm !important;
+        border-top: 1px solid #ddd !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-bottom: none !important;
+      }
+      .read-footer-logo, .read-footer-glyph {
+        font-size: 9pt !important;
+        color: #aaa !important;
+        opacity: 1 !important;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
     }
 
     /* ══════════════════════════════════════ RESPONSIVE ══════════════════════════════════════ */
@@ -1429,7 +1537,7 @@
     }
 
     /* ══════════════════════════════════════ READING VIEW ══════════════════════════════════════ */
-    async function openPoem(id) {
+    async function openPoem(id, pushHistory = true) {
       const p = poems.find(x => x.id === id);
       if (!p) return;
       currentPoemId = id;
@@ -1454,6 +1562,10 @@
       renderPoemBody(p.content || "");
       updateFavBtn(id);
       document.title = `${p.title} — কলমচি`;
+      // Push hash to URL for direct linking & sharing
+      if (pushHistory) {
+        history.pushState({ poemId: id }, p.title, `#poem/${id}`);
+      }
       showView("reading");
       renderRelated(p);
       loadComments(id);
@@ -1524,11 +1636,29 @@
     window.sharePoem = async function() {
       const p = poems.find(x => x.id === currentPoemId);
       if (!p) return;
-      const shareData = { title: p.title + " — কলমচি", text: firstLine(p.content) + "…", url: window.location.href };
+      // Build a direct deep-link URL with hash fragment
+      const baseUrl  = window.location.href.split('#')[0];
+      const deepLink = `${baseUrl}#poem/${p.id}`;
+      const shareData = {
+        title: p.title + " — কলমচি",
+        text:  `"${firstLine(p.content)}…"\n\n— ${p.title} | কলমচি`,
+        url:   deepLink
+      };
       try {
-        if (navigator.share) { await navigator.share(shareData); }
-        else { await navigator.clipboard.writeText(window.location.href); toast("লিংক কপি হয়েছে!", "🔗"); }
-      } catch {}
+        if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+          await navigator.share(shareData);
+          toast("শেয়ার করা হয়েছে!", "✓");
+        } else {
+          await navigator.clipboard.writeText(deepLink);
+          toast("লিংক কপি হয়েছে!", "🔗");
+        }
+      } catch (err) {
+        // If share was cancelled by user, don't show error
+        if (err.name !== "AbortError") {
+          try { await navigator.clipboard.writeText(deepLink); toast("লিংক কপি হয়েছে!", "🔗"); }
+          catch { toast("শেয়ার করা যায়নি", "✕"); }
+        }
+      }
     };
 
     /* ══════════════════════════════════════ ZEN MODE ══════════════════════════════════════ */
@@ -1640,6 +1770,10 @@
       $("progressBar").style.width = "0%";
       document.body.classList.remove("zen");
       exitZen();
+      // Clear hash when leaving reading view
+      if (name !== "reading" && window.location.hash.startsWith("#poem/")) {
+        history.pushState({}, "", window.location.pathname + window.location.search);
+      }
       if (name === "admin")     renderAdminList();
       if (name === "favorites") renderFavorites();
       if (name === "home")      document.title = "কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি";
@@ -1830,7 +1964,28 @@
     }
 
     /* ── Boot ── */
-    loadPoems();
+    loadPoems().then(() => {
+      // After poems load, check if URL has a direct poem link
+      const hash = window.location.hash;
+      if (hash.startsWith("#poem/")) {
+        const id = hash.slice(6);
+        if (id && poems.find(p => p.id === id)) {
+          openPoem(id, false); // false = don't re-push to history
+        }
+      }
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener("popstate", e => {
+      const hash = window.location.hash;
+      if (hash.startsWith("#poem/")) {
+        const id = hash.slice(6);
+        const p  = poems.find(x => x.id === id);
+        if (p) { openPoem(id, false); return; }
+      }
+      // No poem hash → go home
+      showView("home");
+    });
   </script>
 </body>
 </html>
