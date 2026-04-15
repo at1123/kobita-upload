@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি</title>
-  <meta name="description" content="কলমচি — আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি। বাংলা কবিতা, গজল, হাইকু ও মুক্তছন্দের অপূর্ব সংগ্রহশালা।" />
+  <title id="page-title">কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি</title>
+  <meta id="meta-desc" name="description" content="কলমচি — আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি। বাংলা কবিতা, গজল, হাইকু ও মুক্তছন্দের অপূর্ব সংগ্রহশালা।" />
   <meta name="keywords" content="কবিতা, বাংলা কবিতা, আহনাফ তাহসিন, Ahnaf Tahsin, কলমচি, দেশাত্মবোধক, মুক্তছন্দ, বাংলা সাহিত্য, ডিজিটাল ডায়েরি" />
   <meta name="author" content="Ahnaf Tahsin" />
+  
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি" />
-  <meta property="og:description" content="আহনাফ তাহসিনের লেখা বাংলা কবিতা পড়ুন কলমচি ডায়েরিতে।" />
-  <meta property="og:url" content="https://kolomchi.pro.bd/" />
+  <meta id="og-title" property="og:title" content="কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি" />
+  <meta id="og-desc" property="og:description" content="আহনাফ তাহসিনের লেখা বাংলা কবিতা পড়ুন কলমচি ডায়েরিতে।" />
+  <meta id="og-url" property="og:url" content="https://kolomchi.pro.bd/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#07060a" />
 
@@ -23,8 +24,8 @@
     })();
   </script>
 
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"কলমচি","url":"https://kolomchi-41c3a.web.app/","author":{"@type":"Person","name":"Ahnaf Tahsin"},"description":"আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি।"}
+  <script id="schema-data" type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"কলমচি","url":"https://kolomchi.pro.bd/","author":{"@type":"Person","name":"Ahnaf Tahsin"},"description":"আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি।"}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -142,7 +143,6 @@
       background: repeating-linear-gradient(-45deg, transparent, transparent 16px, var(--accent) 16px, var(--accent) 17px);
     }
 
-    /* ─── LIVE BADGE (NEW) ─── */
     .live-badge {
       display: inline-flex; align-items: center; gap: 0.28rem;
       font-size: 0.58rem; font-weight: 600; color: var(--green);
@@ -155,14 +155,6 @@
       animation: blink 1.8s infinite;
     }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
-
-    /* ─── NEW POEM BADGE ─── */
-    .new-badge {
-      font-size: 0.56rem; font-weight: 700; color: var(--bg);
-      background: var(--accent); padding: 0.06rem 0.38rem;
-      border-radius: 2rem; letter-spacing: 0.06em; text-transform: uppercase;
-      margin-left: 0.4rem; vertical-align: middle;
-    }
 
     #progressBar {
       position: fixed; top: 0; left: 0;
@@ -313,7 +305,6 @@
     .stat-pill { font-size: 0.77rem; font-weight: 300; color: var(--text-dim); display: flex; align-items: center; gap: 0.3rem; }
     .stat-pill strong { color: var(--accent); font-weight: 600; font-size: 1.05rem; font-family: 'Noto Serif Bengali', serif; }
 
-    /* ─── SYNC STATUS ─── */
     .sync-indicator {
       display: flex; align-items: center; gap: 0.32rem;
       font-size: 0.62rem; color: var(--text-muted); font-weight: 300;
@@ -362,7 +353,6 @@
     .btn-random:hover { color: var(--accent); }
     .btn-random svg { width: 11px; height: 11px; }
 
-    /* ─── SEARCH HIGHLIGHT ─── */
     mark {
       background: rgba(201,168,124,0.28);
       color: var(--accent2);
@@ -517,7 +507,6 @@
 
     .fav-empty { text-align: center; padding: 4.5rem 0 3rem; color: var(--text-muted); font-weight: 300; font-size: 0.9rem; line-height: 2.4; }
 
-    /* ─── ADMIN ─── */
     .admin-banner {
       display: flex; align-items: center; gap: 0.65rem;
       padding: 0.85rem 1.2rem; background: rgba(232,184,75,0.07);
@@ -643,7 +632,6 @@
     .form-err.show { display: block; }
     .form-success { font-size: 0.75rem; color: var(--green); margin-bottom: 0.85rem; display: none; line-height: 1.55; padding: 0.58rem 0.8rem; background: rgba(126,207,160,0.08); border-radius: 0.4rem; border: 1px solid rgba(126,207,160,0.22); }
     .form-success.show { display: block; }
-    .modal-divider { height: 1px; background: var(--border-soft); margin: 1.4rem 0; }
 
     .fab {
       position: fixed; bottom: 2rem; right: 2rem;
@@ -741,7 +729,6 @@
   <button class="zen-exit" id="zenExit" onclick="exitZen()">✕ ফোকাস বন্ধ</button>
   <button id="scrollTopBtn" title="উপরে যান" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-  <!-- HEADER -->
   <header id="mainHeader">
     <div class="logo" onclick="showView('home')">
       <div class="logo-icon">✦</div>
@@ -764,7 +751,6 @@
     </div>
   </header>
 
-  <!-- SEARCH BAR -->
   <div id="searchBar">
     <div class="search-inner">
       <span class="search-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></span>
@@ -773,15 +759,11 @@
     <div id="searchCount"></div>
   </div>
 
-  <!-- MAIN -->
   <main id="mainArea">
-
-    <!-- HOME VIEW -->
     <div class="view active" id="homeView">
       <div class="home-hero">
         <div class="home-hero-top">
           <p class="home-eyebrow">ডিজিটাল কবিতার ডায়েরি</p>
-          <!-- FIX: real-time sync indicator -->
           <div class="sync-indicator" id="syncIndicator">
             <div class="sync-dot"></div>
             <span id="syncText">লোড হচ্ছে</span>
@@ -804,7 +786,6 @@
           <button class="cat-btn" data-cat="দেশাত্মবোধক">দেশাত্মবোধক <span class="cat-count" id="cnt-দেশাত্মবোধক">০</span></button>
           <button class="cat-btn" data-cat="মুক্তছন্দ">মুক্তছন্দ <span class="cat-count" id="cnt-মুক্তছন্দ">০</span></button>
           <button class="cat-btn" data-cat="গীতিকবিতা">গীতিকবিতা <span class="cat-count" id="cnt-গীতিকবিতা">০</span></button>
-          <!-- FIX: data-cat matches stored value "জ্ঞান", label shows "ব্যঙ্গ" -->
           <button class="cat-btn" data-cat="জ্ঞান">ব্যঙ্গ <span class="cat-count" id="cnt-জ্ঞান">০</span></button>
           <button class="cat-btn" data-cat="ইসলামিক চেতনা">ইসলামিক চেতনা <span class="cat-count" id="cnt-ইসলামিক চেতনা">০</span></button>
           <button class="cat-btn" data-cat="বিপ্লবী">বিপ্লবী <span class="cat-count" id="cnt-বিপ্লবী">০</span></button>
@@ -831,7 +812,6 @@
       </div>
     </div>
 
-    <!-- FAVORITES VIEW -->
     <div class="view" id="favoritesView">
       <button class="back-btn" onclick="showView('home')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -843,7 +823,6 @@
       <div id="favPoemList"></div>
     </div>
 
-    <!-- ADMIN VIEW -->
     <div class="view" id="adminView">
       <button class="back-btn" onclick="showView('home')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -887,7 +866,6 @@
       <div id="adminPoemList"></div>
     </div>
 
-    <!-- READING VIEW -->
     <article class="view" id="readingView">
       <button class="back-btn" id="backBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="15 18 9 12 15 6"/></svg>
@@ -960,13 +938,10 @@
         <span class="read-footer-glyph">✦ কলমচি · আহনাফ তাহসিন</span>
       </footer>
     </article>
-
   </main>
 
-  <!-- FAB -->
   <button class="fab" id="fab" title="নতুন কবিতা যোগ করুন (+)">+</button>
 
-  <!-- AUTH MODAL -->
   <div class="overlay" id="authOverlay">
     <div class="modal">
       <button class="modal-x" id="authClose">✕</button>
@@ -985,7 +960,6 @@
     </div>
   </div>
 
-  <!-- ADD / EDIT POEM MODAL -->
   <div class="overlay" id="poemOverlay">
     <div class="modal modal-wide">
       <button class="modal-x" id="poemModalClose">✕</button>
@@ -1000,7 +974,7 @@
         <input type="text" class="field-input" id="poemTitle" placeholder="কবিতার শিরোনাম…" maxlength="80" />
         <div class="field-footer">
           <span class="field-hint">সর্বোচ্চ ৮০ অক্ষর</span>
-          <span class="field-counter" id="titleCounter">০/৮০</span>
+          <span class="field-counter" id="titleCounter">০/৮0</span>
         </div>
       </div>
 
@@ -1012,7 +986,6 @@
             <option value="দেশাত্মবোধক">দেশাত্মবোধক</option>
             <option value="মুক্তছন্দ">মুক্তছন্দ</option>
             <option value="গীতিকবিতা">গীতিকবিতা</option>
-            <!-- FIX: value="জ্ঞান" is what gets stored — matches filter & counts -->
             <option value="জ্ঞান">ব্যঙ্গ</option>
             <option value="ইসলামিক চেতনা">ইসলামিক চেতনা</option>
             <option value="বিপ্লবী">বিপ্লবী</option>
@@ -1043,7 +1016,6 @@
     </div>
   </div>
 
-  <!-- CONFIRM DELETE MODAL -->
   <div class="overlay" id="deleteOverlay">
     <div class="modal" style="max-width:360px;text-align:center;">
       <h2 class="modal-title" style="margin-bottom:0.5rem">কবিতা মুছবেন?</h2>
@@ -1055,7 +1027,6 @@
     </div>
   </div>
 
-  <!-- TOAST -->
   <div class="toast" id="toast">
     <span class="toast-icon" id="toastIcon"></span>
     <span id="toastMsg"></span>
@@ -1071,7 +1042,6 @@
              onSnapshot }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-    /* ── Firebase config ── */
     const firebaseConfig = {
       apiKey: "AIzaSyDuFrv-F68Jd5tuVc2tAh_H8BwZlgzxsXs",
       authDomain: "kolomchi-41c3a.firebaseapp.com",
@@ -1082,18 +1052,12 @@
     };
 
     const ADMINS = new Set(["ahnaftahsin99@gmail.com", "at@ahnaftahsin.ami.bd", "info@ahnaf.pro.bd", "AT"]);
-
-    /*
-     * FIX #2: CATS array now uses "জ্ঞান" (the actual stored DB value) instead of "ব্যঙ্গ"
-     * The display label "ব্যঙ্গ" is in the HTML; the data value "জ্ঞান" is what matters here.
-     */
     const CATS = ["কবিতা","দেশাত্মবোধক","মুক্তছন্দ","গীতিকবিতা","জ্ঞান","ইসলামিক চেতনা","বিপ্লবী","বাঙালিত্ব","প্রহসন"];
 
     const app  = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db   = getFirestore(app);
 
-    /* ── State ── */
     let poems         = [];
     let activeCat     = "সব";
     let activeSort    = "newest";
@@ -1106,8 +1070,9 @@
     let isEditMode    = false;
     let pendingDeleteId = null;
     let bodyFontSize  = parseFloat(localStorage.getItem("kolomchi-fs") || "1.1");
-    let unsubPoems    = null; // FIX: store listener unsubscribe
+    let unsubPoems    = null; 
     let isFirstLoad   = true;
+    let savedScrollPosition = 0; // Remembers your scroll placement
 
     const viewedThisSession = new Set(
       JSON.parse(sessionStorage.getItem("kolomchi-viewed") || "[]")
@@ -1115,13 +1080,11 @@
 
     const $ = id => document.getElementById(id);
 
-    /* ── Font size ── */
     const FS_MIN = 0.85, FS_MAX = 1.55;
     function applyFontSize(size) {
       bodyFontSize = Math.max(FS_MIN, Math.min(FS_MAX, size));
       document.documentElement.style.setProperty('--body-fs', bodyFontSize + 'rem');
       localStorage.setItem("kolomchi-fs", bodyFontSize);
-      // FIX: update display and disable buttons at limits
       $("fsDisplay").textContent = Math.round(bodyFontSize * 100) + "%";
       $("fsDown").disabled = bodyFontSize <= FS_MIN;
       $("fsUp").disabled   = bodyFontSize >= FS_MAX;
@@ -1135,12 +1098,6 @@
       return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
     }
 
-    /* ─────────────────────────────────────────
-       FIX #1: REAL-TIME LISTENER with onSnapshot
-       This replaces getDocs so the poem list
-       updates instantly when you add/edit/delete
-       from any device or tab.
-    ───────────────────────────────────────── */
     function setSyncStatus(status) {
       const el = $("syncIndicator");
       const tx = $("syncText");
@@ -1154,14 +1111,12 @@
       const q = query(collection(db, "poems"), orderBy("timestamp", "desc"));
 
       unsubPoems = onSnapshot(q, (snap) => {
-        // FIX: detect newly added poems vs first load
         const incoming = snap.docs.map(d => ({ id: d.id, ...d.data() }));
 
         if (!isFirstLoad) {
           snap.docChanges().forEach(change => {
             if (change.type === "added") {
               const newP = { id: change.doc.id, ...change.doc.data() };
-              // Only animate/toast for truly new ones not already in list
               if (!poems.find(p => p.id === newP.id)) {
                 toast("নতুন কবিতা যুক্ত হয়েছে ✦", "✦");
               }
@@ -1182,7 +1137,6 @@
         renderList();
         renderAdminList();
 
-        // FIX: if currently reading a poem that was updated, refresh it silently
         if (currentPoemId && $("readingView").classList.contains("active")) {
           const updated = poems.find(p => p.id === currentPoemId);
           if (updated) {
@@ -1192,7 +1146,6 @@
           }
         }
 
-        // Handle deep link on first load
         const hash = window.location.hash;
         if (hash.startsWith("#poem/") && snap.docs.length > 0) {
           const id = hash.slice(6);
@@ -1206,7 +1159,6 @@
       });
     }
 
-    /* ── STATS ── */
     function updateStats() {
       const total      = poems.length;
       const cats       = [...new Set(poems.map(p => p.category).filter(Boolean))];
@@ -1216,20 +1168,17 @@
       $("statCats").textContent  = toBnNum(cats.length);
       $("statViews").textContent = toBnNum(totalViews);
 
-      /* FIX #3: build counts from actual stored data */
       const catCounts = { "সব": total };
       poems.forEach(p => {
         if (p.category) catCounts[p.category] = (catCounts[p.category] || 0) + 1;
       });
 
-      /* FIX: update counts using correct element IDs (cnt- prefix) */
       const allCatKeys = ["সব", ...CATS];
       allCatKeys.forEach(cat => {
         const el = $("cnt-" + cat);
         if (el) el.textContent = toBnNum(catCounts[cat] || 0);
       });
 
-      /* Admin stats */
       $("a-total").textContent = toBnNum(total);
       $("a-cats").textContent  = toBnNum(cats.length);
       $("a-views").textContent = toBnNum(totalViews);
@@ -1242,7 +1191,6 @@
       $("favBadge").classList.toggle("show", favorites.length > 0);
     }
 
-    /* ── RENDER LIST ── */
     function getFiltered() {
       let result = activeCat === "সব" ? poems : poems.filter(p => p.category === activeCat);
       if (searchQuery) {
@@ -1261,21 +1209,11 @@
 
     const eyeSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`;
 
-    /* FIX: highlight matching text in search results */
     function highlight(text, query) {
       if (!query) return esc(text);
       const safe = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const regex = new RegExp(`(${safe})`, 'gi');
       return esc(text).replace(regex, '<mark>$1</mark>');
-    }
-
-    /* Check if poem is "new" (added within last 7 days) */
-    function isNewPoem(p) {
-      const ts = p.timestamp;
-      if (!ts) return false;
-      const d = ts.toDate ? ts.toDate() : (ts.seconds ? new Date(ts.seconds * 1000) : null);
-      if (!d) return false;
-      return (Date.now() - d.getTime()) < 7 * 24 * 60 * 60 * 1000;
     }
 
     function renderList() {
@@ -1298,10 +1236,7 @@
       $("poemList").innerHTML = `<div class="poem-list">${filtered.map((p, i) => `
         <div class="poem-item" data-id="${p.id}" style="animation-delay:${Math.min(i*35,380)}ms">
           <div>
-            <div class="poem-item-title">
-              ${highlight(p.title, searchQuery)}
-              ${isNewPoem(p) ? '<span class="new-badge">নতুন</span>' : ''}
-            </div>
+            <div class="poem-item-title">${highlight(p.title, searchQuery)}</div>
             <div class="poem-item-preview">${highlight(firstLine(p.content), searchQuery)}</div>
             <div class="poem-item-meta">
               <span class="poem-meta-pill">${eyeSvg} ${toBnNum(p.views||0)}</span>
@@ -1326,7 +1261,6 @@
       }
     }
 
-    /* ── ADMIN LIST ── */
     function renderAdminList() {
       const el = $("adminPoemList");
       if (!poems.length) {
@@ -1336,10 +1270,7 @@
       el.innerHTML = poems.map(p => `
         <div class="admin-poem-item" data-id="${p.id}">
           <div>
-            <div class="admin-poem-title">
-              ${esc(p.title)}
-              ${isNewPoem(p) ? '<span class="new-badge">নতুন</span>' : ''}
-            </div>
+            <div class="admin-poem-title">${esc(p.title)}</div>
             <div class="admin-poem-preview">${esc(firstLine(p.content))}</div>
             <div class="admin-poem-meta">
               <span class="poem-cat-badge">${esc(p.category)}</span>
@@ -1390,7 +1321,6 @@
       });
     }
 
-    /* ── VIEW COUNTER ── */
     async function incrementViews(id) {
       if (viewedThisSession.has(id)) return;
       viewedThisSession.add(id);
@@ -1403,7 +1333,6 @@
       } catch {}
     }
 
-    /* ── READING VIEW ── */
     async function openPoem(id, pushHistory = true) {
       const p = poems.find(x => x.id === id);
       if (!p) return;
@@ -1428,7 +1357,28 @@
       `;
 
       updateFavBtn(id);
-      document.title = `${p.title} — কলমচি`;
+      
+      // === DYNAMIC SEO INJECTION FOR SPA ===
+      const shortDesc = (firstLine(p.content) || "").substring(0, 150) + "...";
+      const poemUrl = `https://kolomchi.pro.bd/#poem/${p.id}`;
+      
+      $("page-title").textContent = `${p.title} — কলমচি`;
+      if($("meta-desc")) $("meta-desc").content = shortDesc;
+      if($("og-title")) $("og-title").content = `${p.title} — কলমচি`;
+      if($("og-desc")) $("og-desc").content = shortDesc;
+      if($("og-url")) $("og-url").content = poemUrl;
+      
+      let ldJson = $("schema-data");
+      if(ldJson) {
+        ldJson.textContent = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": p.title,
+          "author": { "@type": "Person", "name": "Ahnaf Tahsin" },
+          "description": shortDesc,
+          "url": poemUrl
+        });
+      }
 
       if (pushHistory) {
         history.pushState({ poemId: id }, p.title, `#poem/${id}`);
@@ -1465,7 +1415,6 @@
       btn.innerHTML = `<svg viewBox="0 0 24 24" fill="${isFav?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="11" height="11"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> ${isFav ? 'সংরক্ষিত' : 'সংরক্ষণ'}`;
     }
 
-    /* ── FAVORITES ── */
     window.toggleFavFromReading = function() {
       if (!currentPoemId) return;
       const idx = favorites.indexOf(currentPoemId);
@@ -1476,7 +1425,6 @@
       updateStats(); renderList();
     };
 
-    /* ── COPY & SHARE ── */
     window.copyPoem = async function() {
       const p = poems.find(x => x.id === currentPoemId);
       if (!p) return;
@@ -1505,18 +1453,15 @@
       }
     };
 
-    /* ── ZEN ── */
     window.enterZen = function() { document.body.classList.add("zen");  $("zenBtn").classList.add("active"); };
     window.exitZen  = function() { document.body.classList.remove("zen"); $("zenBtn").classList.remove("active"); };
     window.openEditFromReading = function() { if (currentPoemId) openEditModal(currentPoemId); };
 
-    /* ── COMMENTS (FIX: added orderBy) ── */
     async function loadComments(poemId) {
       const list  = $("commentsList");
       const badge = $("commentsCountBadge");
       list.innerHTML = `<div class="loading-row"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
       try {
-        /* FIX: proper ordered query */
         const { getDocs } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         const q    = query(
           collection(db, "comments"),
@@ -1560,7 +1505,6 @@
       btn.disabled = false; btn.textContent = "মন্তব্য প্রকাশ করুন";
     });
 
-    /* ── CAT FILTER ── */
     $("catStrip").addEventListener("click", e => {
       const btn = e.target.closest(".cat-btn");
       if (!btn) return;
@@ -1569,7 +1513,6 @@
       renderList();
     });
 
-    /* ── SORT ── */
     document.querySelectorAll(".sort-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         activeSort = btn.dataset.sort;
@@ -1578,13 +1521,11 @@
       });
     });
 
-    /* ── RANDOM ── */
     $("randomBtn").addEventListener("click", () => {
       if (!poems.length) return;
       openPoem(poems[Math.floor(Math.random() * poems.length)].id);
     });
 
-    /* ── SEARCH ── */
     $("searchToggleBtn").addEventListener("click", toggleSearch);
     function toggleSearch() {
       isSearchOpen = !isSearchOpen;
@@ -1594,7 +1535,6 @@
       if (isSearchOpen) {
         setTimeout(() => $("searchInput").focus(), 200);
       } else {
-        /* FIX: fully clear search state when closing */
         searchQuery = "";
         $("searchInput").value = "";
         $("searchCount").textContent = "";
@@ -1604,7 +1544,6 @@
 
     $("searchInput").addEventListener("input", () => {
       searchQuery = $("searchInput").value;
-      /* FIX: switch to home view first so search results are visible */
       if (!$("homeView").classList.contains("active")) {
         document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
         $("homeView").classList.add("active");
@@ -1614,9 +1553,7 @@
 
     $("favBtn").addEventListener("click", () => { prevView = "home"; showView("favorites"); });
 
-    /* ── VIEWS ── */
     window.showView = function(name) {
-      /* FIX: close search when navigating away from home */
       if (name !== "home" && isSearchOpen) {
         isSearchOpen = false;
         $("searchBar").classList.remove("open");
@@ -1625,9 +1562,28 @@
         searchQuery = ""; $("searchInput").value = ""; $("searchCount").textContent = "";
       }
 
+      // Memory for Scroll Position
+      if ($("homeView").classList.contains("active") && name !== "home") {
+        savedScrollPosition = window.scrollY;
+      }
+
       document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
       $(name + "View").classList.add("active");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      
+      // Instant snap back for Home
+      if (name === "home") {
+        window.scrollTo({ top: savedScrollPosition, behavior: "instant" });
+        
+        // Reset base SEO meta tags for home 
+        $("page-title").textContent = "কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি";
+        if($("meta-desc")) $("meta-desc").content = "কলমচি — আহনাফ তাহসিনের একটি ডিজিটাল কবিতার ডায়েরি। বাংলা কবিতা, গজল, হাইকু ও মুক্তছন্দের অপূর্ব সংগ্রহশালা।";
+        if($("og-title")) $("og-title").content = "কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি";
+        if($("og-desc")) $("og-desc").content = $("meta-desc").content;
+        if($("og-url")) $("og-url").content = "https://kolomchi.pro.bd/";
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
       $("progressBar").classList.remove("visible");
       $("progressBar").style.width = "0%";
       exitZen();
@@ -1637,17 +1593,14 @@
       }
       if (name === "admin")     renderAdminList();
       if (name === "favorites") renderFavorites();
-      if (name === "home")      document.title = "কলমচি — আহনাফ তাহসিনের কবিতার ডায়েরি";
     };
 
-    /* FIX: back button uses stable prevView */
     $("backBtn").addEventListener("click", () => {
       const target = prevView || "home";
       prevView = "home";
       showView(target);
     });
 
-    /* ── PROGRESS BAR + SCROLL TOP ── */
     window.addEventListener("scroll", () => {
       const isReading = $("readingView").classList.contains("active");
       if (isReading) {
@@ -1661,7 +1614,6 @@
       $("scrollTopBtn").classList.toggle("show", window.scrollY > 380);
     });
 
-    /* ── AUTH ── */
     onAuthStateChanged(auth, user => {
       currentUser = user;
       const authBtn = $("authBtn");
@@ -1711,7 +1663,6 @@
 
     async function doSignOut() { await signOut(auth); toast("প্রস্থান সম্পন্ন হয়েছে", "✓"); }
 
-    /* ── ADD / EDIT POEM ── */
     function openAddModal() {
       isEditMode = false;
       $("editingPoemId").value = "";
@@ -1802,7 +1753,6 @@
           const updates = { title, content, category };
           if (dateVal) updates.timestamp = tsDate;
           await updateDoc(doc(db, "poems", id), updates);
-          /* onSnapshot will auto-update the local poems array */
           succEl.textContent = "কবিতা সফলভাবে সংরক্ষিত হয়েছে!";
           succEl.classList.add("show");
           toast("কবিতা সম্পাদনা সংরক্ষিত ✓", "✓");
@@ -1810,7 +1760,6 @@
         } else {
           const ts  = tsDate || serverTimestamp();
           await addDoc(collection(db, "poems"), { title, content, category, timestamp: ts, views: 0 });
-          /* onSnapshot will auto-add to list */
           toast("কবিতা প্রকাশিত হয়েছে ✦", "✦");
           closeOverlay("poemOverlay");
         }
@@ -1825,7 +1774,6 @@
       btn.textContent = isEditMode ? "পরিবর্তন সংরক্ষণ করুন ✦" : "প্রকাশ করুন ✦";
     });
 
-    /* ── DELETE ── */
     function askDelete(id, title) {
       pendingDeleteId = id;
       $("deleteModalSub").textContent = `"${title}" — এই কবিতাটি চিরতরে মুছে যাবে।`;
@@ -1840,7 +1788,6 @@
       btn.disabled = true; btn.textContent = "মুছছে…";
       try {
         await deleteDoc(doc(db, "poems", pendingDeleteId));
-        /* onSnapshot auto-removes from list */
         favorites = favorites.filter(f => f !== pendingDeleteId);
         localStorage.setItem("kolomchi-favs", JSON.stringify(favorites));
         closeOverlay("deleteOverlay");
@@ -1855,7 +1802,6 @@
       pendingDeleteId = null;
     });
 
-    /* ── THEME ── */
     const html     = document.documentElement;
     const themeBtn = $("themeBtn");
     themeBtn.textContent = html.getAttribute("data-theme") === "dark" ? "🌙" : "☀️";
@@ -1866,7 +1812,6 @@
       localStorage.setItem("কলমচি-theme", next);
     });
 
-    /* ── KEYBOARD SHORTCUTS ── */
     document.addEventListener("keydown", e => {
       const inInput = ["INPUT","TEXTAREA","SELECT"].includes(e.target.tagName);
       if (e.key === "Escape") {
@@ -1888,7 +1833,6 @@
       }
     });
 
-    /* ── HISTORY (popstate) ── */
     window.addEventListener("popstate", () => {
       const hash = window.location.hash;
       if (hash.startsWith("#poem/")) {
@@ -1898,7 +1842,6 @@
       showView("home");
     });
 
-    /* ── HELPERS ── */
     function openOverlay(id)  { $(id).classList.add("open"); }
     function closeOverlay(id) { $(id).classList.remove("open"); }
 
@@ -1934,7 +1877,6 @@
       toastTimer = setTimeout(() => el.classList.remove("show"), ms);
     }
 
-    /* ── BOOT: start real-time listener ── */
     startPoemListener();
 
   </script>
