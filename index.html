@@ -1581,7 +1581,7 @@ async function openPoem(id, pushHistory=true) {
   document.querySelector("#og-desc").content = shortDesc;
   document.querySelector("#og-url").content = poemUrl;
   if(pushHistory) history.pushState({poemId:id},p.title,`#poem/${id}`);
-  showView("reading",{restoreScroll:false,skipSave:true});
+  showView("reading",{restoreScroll:false});
   renderRelated(p); loadComments(id);
   incrementViews(id).then(()=>{ const lv=$("liveViewCount"); if(lv) lv.textContent=toBn(p.views||0); });
   if(isTTSPlaying) stopTTS();
